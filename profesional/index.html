@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portafolio profesional de Marcos Oyarzo — Desarrollo, Datos y Ciberseguridad." />
+  <title>Marcos Oyarzo | Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">MO</a>
+      <a class="btn btn--small btn--ghost" href="../index.html" style="margin-left:.75rem;">Hub</a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div id="menu" class="nav__menu">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="../index.html#contacto">Contacto</a>
+        <button id="themeToggle" class="btn btn--ghost" type="button" aria-label="Cambiar tema">Tema</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Ingeniería en Informática · Datos · Ciberseguridad</p>
+          <h1>Marcos Alberto Oyarzo Álvarez</h1>
+          <p class="lead">
+            Desarrollo y analítica con foco en impacto operacional: automatización con Python, SQL, dashboards y buenas prácticas DevOps.
+            En paralelo, cursando Máster en Ciberseguridad (Gestión y Estrategia).
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--ghost" href="../index.html#contacto">Contactarme</a>
+            <a class="btn btn--ghost" href="assets/docs/CV-Marcos-Oyarzo.pdf" target="_blank" rel="noopener">Descargar CV</a>
+          </div>
+</div>
+
+        <div class="hero__card" aria-label="Resumen rápido">
+          <div class="card">
+            <div class="card__header">
+              <p class="card__kicker">Disponibilidad</p>
+              <p class="card__value">Full-Time (Presencial / Híbrido / Remoto)</p>
+            </div>
+
+            <div class="card__body">
+              <div class="stat">
+                <p class="stat__label">Foco</p>
+                <p class="stat__value">Data / Automatización / DevOps</p>
+              </div>
+              <div class="stat">
+                <p class="stat__label">Stack</p>
+                <p class="stat__value">Python · SQL · Power BI · Laravel · Docker</p>
+              </div>
+              <div class="stat">
+                <p class="stat__label">Ubicación</p>
+                <p class="stat__value">Recoleta, RM (Chile)</p>
+              </div>
+
+              <hr />
+</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Sobre mí</h2>
+          <p class="muted">Perfil orientado a ejecución, métricas y mejora continua.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Propuesta de valor</h3>
+            <p>
+              Ingeniero en Informática con experiencia en desarrollo full-stack y analítica de datos (Python/SQL),
+              construcción de KPIs, automatización y despliegues en entornos cloud. Me interesa escalar buenas prácticas
+              (ETL, versionado, observabilidad, seguridad) para reducir fricción operativa y mejorar la toma de decisiones.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Áreas de interés</h3>
+            <ul class="list">
+              <li>Automatización y pipelines de datos (ETL/ELT).</li>
+              <li>Visualización y reporting ejecutivo (Power BI / Excel).</li>
+              <li>DevOps pragmático (Docker/K8s, CI/CD, Linux).</li>
+              <li>Ciberseguridad aplicada (blue team, análisis, hardening).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Habilidades</h2>
+          <p class="muted">Tecnologías y competencias destacadas.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Datos</h3>
+            <ul class="tags">
+              <li>Python (pandas, numpy)</li>
+              <li>SQL (joins, agregaciones, optimización)</li>
+              <li>ETL / limpieza</li>
+              <li>Power BI</li>
+              <li>Excel avanzado</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Backend / Web</h3>
+            <ul class="tags">
+              <li>PHP · Laravel</li>
+              <li>Django</li>
+              <li>REST APIs</li>
+              <li>WordPress</li>
+              <li>MySQL · PostgreSQL</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>DevOps / Cloud</h3>
+            <ul class="tags">
+              <li>Linux</li>
+              <li>Git</li>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>GCP (básico)</li>
+              <li>AWS (básico)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Experiencia</h2>
+          <p class="muted">Resultados y responsabilidades principales por rol.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <p class="timeline__date">Abr 2025 — Nov 2025</p>
+              <p class="timeline__place">Vule S.A</p>
+            </div>
+            <div class="timeline__content card">
+              <h3>Analista de Operaciones / Analista de Datos</h3>
+              <ul class="list">
+                <li>Análisis de grandes volúmenes con Python y SQL para monitoreo operacional.</li>
+                <li>Dashboards en Power BI y Excel avanzado para KPIs (autonomía, consumos, tiempos de carga).</li>
+                <li>Automatización con scripts Python y procesos ETL desde APIs/CSV/BD.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <p class="timeline__date">Feb 2025 — Abr 2025</p>
+              <p class="timeline__place">Cyber Center S.A.</p>
+            </div>
+            <div class="timeline__content card">
+              <h3>Desarrollador Full Stack / DevOps</h3>
+              <ul class="list">
+                <li>Desarrollo PHP/Laravel/WordPress y administración MySQL.</li>
+                <li>Monitoreo Linux y despliegues en cloud (GCP), Docker y Kubernetes.</li>
+                <li>Pruebas de seguridad, SEO y optimización de performance.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__meta">
+              <p class="timeline__date">Dic 2022 — Nov 2024</p>
+              <p class="timeline__place">160K · ClaroVTR</p>
+            </div>
+            <div class="timeline__content card">
+              <h3>Ingeniero Desarrollador & Data Science</h3>
+              <ul class="list">
+                <li>Desarrollo y automatización PL/SQL, Data Quality y KPIs en entornos Oracle.</li>
+                <li>ETL con Pentaho y análisis con Python/Shell; visualización en Power BI.</li>
+                <li>Prácticas DevOps y metodologías ágiles (Scrum).</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Proyectos</h2>
+          <p class="muted">Reemplaza estos ejemplos por tus repos reales (ideal: 3–6 proyectos).</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card project">
+            <h3>Dashboard Operacional</h3>
+            <p class="muted">KPIs de operación y eficiencia energética (Power BI + SQL).</p>
+            <ul class="list list--compact">
+              <li>Modelo estrella</li>
+              <li>Métricas DAX</li>
+              <li>Alertas y filtros</li>
+            </ul>
+            <div class="project__links">
+              <a class="btn btn--small btn--ghost" href="#" aria-disabled="true">Demo</a>
+              <a class="btn btn--small" href="#" aria-disabled="true">Repo</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <h3>ETL Automatizado</h3>
+            <p class="muted">Pipeline de extracción, limpieza y carga (Python + APIs).</p>
+            <ul class="list list--compact">
+              <li>pandas / requests</li>
+              <li>Validaciones</li>
+              <li>Logs y métricas</li>
+            </ul>
+            <div class="project__links">
+              <a class="btn btn--small btn--ghost" href="#" aria-disabled="true">Demo</a>
+              <a class="btn btn--small" href="#" aria-disabled="true">Repo</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <h3>Web App (Laravel)</h3>
+            <p class="muted">Aplicación CRUD con auth, roles y deploy en Docker.</p>
+            <ul class="list list--compact">
+              <li>Laravel</li>
+              <li>MySQL</li>
+              <li>Docker Compose</li>
+            </ul>
+            <div class="project__links">
+              <a class="btn btn--small btn--ghost" href="#" aria-disabled="true">Demo</a>
+              <a class="btn btn--small" href="#" aria-disabled="true">Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+</main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Marcos Oyarzo. Hecho con HTML/CSS/JS.</p>
+      <a class="btn btn--small btn--ghost" href="#inicio">Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+<a class="wa-float" href="https://wa.me/56928362758?text=Hola%20Marcos%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <img src="../assets/img/social/whatsapp-float.png" alt="WhatsApp">
+</a>
+</body>
+</html>
