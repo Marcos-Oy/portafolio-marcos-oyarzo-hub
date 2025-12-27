@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+  <defs>
+    <linearGradient id="p3" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2563EB" stop-opacity="0.14"/>
+      <stop offset="0.5" stop-color="#7C3AED" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#00B8D9" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="800" fill="#FFFFFF"/>
+  <rect x="70" y="70" width="1260" height="660" rx="34" fill="url(#p3)" opacity="0.95" stroke="#0A0E1C" stroke-opacity="0.10"/>
+
+  <g fill="#FFFFFF" opacity="0.88" stroke="#0A0E1C" stroke-opacity="0.10" stroke-width="3">
+    <rect x="170" y="240" width="520" height="380" rx="28"/>
+    <rect x="740" y="240" width="480" height="180" rx="28"/>
+    <rect x="740" y="440" width="480" height="180" rx="28"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas" font-weight="900" fill="#0A0E1C" fill-opacity="0.86" font-size="26">
+    <text x="220" y="310">POST /v1/events</text>
+    <text x="220" y="360">GET  /v1/users</text>
+    <text x="220" y="410">PUT  /v1/config</text>
+    <text x="220" y="510">Auth • Rate-limit • Logs</text>
+    <text x="220" y="560">CI/CD • Containers</text>
+
+    <text x="780" y="320">Queue</text>
+    <text x="780" y="520">Database</text>
+  </g>
+
+  <g fill="#0A0E1C" fill-opacity="0.88" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-weight="950">
+    <text x="180" y="180" font-size="54">API & Integración</text>
+    <text x="180" y="230" font-size="30" fill-opacity="0.62">Backend • Seguridad • Deploy</text>
+  </g>
+
+  <g fill="#00B8D9" opacity="0.95">
+    <circle cx="1120" cy="330" r="10"/>
+    <circle cx="1120" cy="530" r="10"/>
+  </g>
+</svg>
