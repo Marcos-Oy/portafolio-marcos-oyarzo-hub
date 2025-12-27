@@ -143,14 +143,23 @@ html[data-theme="dark"] .nav-cta{
   width: 44px; height: 44px;
   border: 1px solid var(--stroke);
   background: rgba(255,255,255,0.65);
+  color: var(--text);
   border-radius: 14px;
   cursor: pointer;
   padding: 10px;
+  backdrop-filter: blur(10px);
+}
+html[data-theme="dark"] .nav-toggle{
+  background: rgba(15,23,42,0.75);
 }
 .nav-toggle span{
-  display:block; height: 2px; width: 100%;
-  background: rgba(10,14,28,0.72);
-  margin: 6px 0; border-radius: 999px;
+  display:block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  margin: 6px 0;
+  border-radius: 999px;
+  opacity: 0.95;
 }
 
 /* HERO Slider */
@@ -192,8 +201,10 @@ html[data-theme="dark"] .nav-cta{
   color: var(--accent); /* replaced below */
 }
 .slide-overlay h1, .slide-overlay h2{
-  margin: 0; line-height: 1.08; font-weight: 950;
-  color: rgba(10,14,28,0.92);
+  margin: 0;
+  line-height: 1.08;
+  font-weight: 950;
+  color: var(--text);
 }
 .slide-overlay h1{ font-size: clamp(1.9rem, 2.6vw + 1.1rem, 3.0rem); }
 .slide-overlay h2{ font-size: clamp(1.55rem, 1.8vw + 1.0rem, 2.2rem); }
@@ -202,7 +213,7 @@ html[data-theme="dark"] .nav-cta{
   margin: 0;
   max-width: 70ch;
   font-size: 1.02rem;
-  color: rgba(10,14,28,0.68);
+  color: var(--muted);
   font-weight: 650;
 }
 
@@ -252,16 +263,26 @@ html[data-theme="dark"] .nav-cta{
   transform: translateY(-50%);
   width: 48px; height: 48px;
   border-radius: 16px;
-  border: 1px solid rgba(10,14,28,0.10);
+  border: 1px solid var(--stroke);
   background: rgba(255,255,255,0.78);
-  color: rgba(10,14,28,0.92);
+  color: var(--text);
   cursor:pointer;
   box-shadow: var(--shadow-2);
-  transition: transform 160ms ease, background 160ms ease;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
   display:grid; place-items:center;
   z-index: 2;
+  backdrop-filter: blur(10px);
 }
-.slider-btn:hover{ transform: translateY(-50%) translateY(-1px); background: rgba(255,255,255,0.95); }
+html[data-theme="dark"] .slider-btn{
+  background: rgba(15,23,42,0.72);
+}
+.slider-btn:hover{
+  transform: translateY(-50%) translateY(-1px);
+  background: rgba(255,255,255,0.95);
+}
+html[data-theme="dark"] .slider-btn:hover{
+  background: rgba(15,23,42,0.86);
+}
 .slider-btn span{ font-size: 1.8rem; line-height: 1; }
 .slider-btn--prev{ left: 14px; }
 .slider-btn--next{ right: 14px; }
@@ -277,10 +298,13 @@ html[data-theme="dark"] .nav-cta{
 }
 .dot{
   width: 10px; height: 10px; border-radius: 999px;
-  border: 1px solid rgba(10,14,28,0.34);
+  border: 1px solid var(--stroke);
   background: rgba(255,255,255,0.65);
   cursor: pointer;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+html[data-theme="dark"] .dot{
+  background: rgba(15,23,42,0.70);
 }
 .dot.is-active{ background: rgba(0,184,217,0.95); border-color: rgba(0,0,0,0); /* replaced below */ }
 .dot:hover{ transform: scale(1.12); }
@@ -466,10 +490,14 @@ html[data-theme="dark"] .icon-btn:hover{ background: rgba(15,23,42,0.92); }
 .contact-cards{ display:grid; gap: 10px; margin-top: 16px; }
 .contact-card{
   border-radius: 16px;
-  border: 1px solid rgba(10,14,28,0.10);
+  border: 1px solid var(--stroke);
   background: rgba(255,255,255,0.72);
   padding: 12px 12px;
   box-shadow: var(--shadow-2);
+}
+html[data-theme="dark"] .contact-card{
+  background: rgba(15,23,42,0.70);
+  border-color: rgba(255,255,255,0.12);
 }
 .contact-label{ display:block; color: var(--muted); font-weight: 900; font-size: 0.86rem; }
 .contact-card a{ display:inline-block; margin-top: 4px; font-weight: 950; color: var(--accent); }
@@ -634,6 +662,9 @@ input:focus, textarea:focus{ border-color: rgba(0,184,217,0.34); background: rgb
   height: 54px;
   border-radius: 18px;
   background: rgba(255,255,255,0.82);
+}
+html[data-theme="dark"] .hero-slider--xl .slider-btn{
+  background: rgba(15,23,42,0.76);
 }
 
 /* Dots más abajo y centrados */
@@ -976,3 +1007,43 @@ html[data-theme="dark"] .project-media{
   max-width: 100%;
   grid-template-columns: 1fr;
 }
+
+
+
+/* ==========================================================================
+   Patch v6 — Mobile fixes (Contacto + menú en Dark)
+   ========================================================================== */
+@media (max-width: 900px){
+  /* Títulos en columnas (evita texto “en vertical” en móvil) */
+  .section-title{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .section-title p{ max-width: 100%; }
+
+  /* Contacto responsive */
+  .contact-grid{ grid-template-columns: 1fr; }
+  .contact-cards{ grid-template-columns: 1fr; }
+}
+
+/* Menú móvil: en Dark no debe quedar con fondo claro */
+@media (max-width: 680px){
+  html[data-theme="dark"] .site-nav{
+    background: rgba(15,23,42,0.94);
+    border-color: rgba(255,255,255,0.12);
+  }
+  html[data-theme="dark"] .site-nav a{
+    color: var(--text);
+  }
+  html[data-theme="dark"] .site-nav a:hover{
+    background: rgba(255,255,255,0.06);
+    color: var(--text);
+  }
+}
+
+
+/* ==========================================================================
+   Patch v7 — Slide text + Hamburger icon theme-aware
+   ========================================================================== */
