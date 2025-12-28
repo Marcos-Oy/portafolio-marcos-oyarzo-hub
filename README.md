@@ -1,48 +1,28 @@
-# Portafolio - Ingeniero TI / Datos (Light) + Slider estilo 'slide-overlay'
+# Hub — Marca personal (Data + Ciber + Web + Arquitectura TI + IA)
 
-## Qué incluye
-- Slider HERO con estructura similar a tu ejemplo:
-  - `#heroSlides` + `.slide.is-active`
-  - Botones `#heroPrev` / `#heroNext`
-  - Dots en `#heroDots` (se generan automáticamente desde JS)
-- Animaciones suaves (reveal on scroll)
-- Secciones: Sobre mí, Servicios, Proyectos, Contacto
-- Botón flotante de WhatsApp
+Este proyecto es un **Hub** (página principal) que enlaza a tus 5 servicios principales.
 
 ## Cómo usar
-1. Descomprime el .zip
-2. Abre `index.html` en el navegador.
+1. Abre `index.html` en tu navegador, o publícalo en tu hosting.
+2. Edita `js/main.js` y actualiza los enlaces:
+```js
+const LINKS = {
+  data: "https://tu-dominio.cl/data-engineering/",
+  cyber: "https://tu-dominio.cl/ciberseguridad-ciudadana/",
+  web: "https://tu-dominio.cl/desarrollo-web/",
+  it: "https://tu-dominio.cl/arquitectura-ti/"
+};
+```
 
-## Dónde editar
-- Textos y enlaces: `index.html`
-- Estilos (colores, tamaños, layout): `css/styles.css`
-- Slider/JS (autoplay, navegación): `js/main.js`
-- Imágenes:
-  - Hero: `img/hero-1.svg`, `img/hero-2.svg`, `img/hero-3.svg`
-  - Proyectos: `img/project-*.svg`
+## Personalización rápida
+- Nombre / subtítulo: `index.html` (header y footer).
+- Foto: reemplaza `img/perfil.jpeg`.
+- WhatsApp: actualiza el número en el enlace `wa.me/...` (header flotante y contacto).
+- Logos / testimonios: secciones `Clientes` y `Testimonios` en `index.html`.
+- Colores: variables CSS en `css/styles.css`.
 
-## WhatsApp
-Reemplaza el número en `index.html` (busca `wa.me/56912345678`).
-
-
-## Hero XL (full-bleed)
-El slider superior ahora ocupa casi todo el alto de pantalla.
-Ajustes en `css/styles.css` bajo el bloque “XL HERO (full-bleed)”.
-
-
-## Tema Dark/Light (toggle)
-- Botón en el header para alternar tema.
-- Preferencia se guarda en `localStorage` (key: `theme`).
-- Si no hay preferencia, respeta `prefers-color-scheme`.
-
-
-## Imagen real de ejemplo
-- Se incluyó `img/hero-real.png` como ejemplo de estética TI (puedes reemplazarlo por tus fotos).
-
-
-## Perfil (foto)
-- Se agregó foto en 'Sobre mí': `img/profile.jpg` (reemplázala por tu imagen).
-
-
-## Botones (dark)
-- Se mejoró el sistema de botones usando variables (`--btn-*`) para que en dark se vean coherentes.
+## Estructura
+- `index.html` — contenido y secciones
+- `css/styles.css` — estilos + light/dark (variables)
+- `js/main.js` — menú móvil, carrusel full, links a sitios, casos
+- `img/` — hero y recursos gráficos

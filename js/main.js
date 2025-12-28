@@ -1,201 +1,250 @@
-/* ==========================================================================
-   JS - Interacciones
-   - Slider HERO (estructura similar a tu ejemplo)
-   - Proyectos (panel)
-   - Reveal on scroll
-   - Menú móvil
-   - Form demo (sin backend)
-   ========================================================================== */
-
-(function(){
-  const $ = (sel, parent=document) => parent.querySelector(sel);
-  const $$ = (sel, parent=document) => Array.from(parent.querySelectorAll(sel));
-
-  // ------------------------------
-  // Theme (Light/Dark) — 1 clic
-  // - Guarda preferencia en localStorage
-  // - Respeta prefers-color-scheme si no hay preferencia
-  // ------------------------------
-  const themeToggle = document.getElementById('themeToggle');
+(() => {
   const root = document.documentElement;
 
-  function getInitialTheme(){
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') return saved;
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
+  // --- Config: cambia estos enlaces a tus URLs reales ---
+  const LINKS = {
+    data: "./data-engineering/",
+    cyber: "./ciberseguridad-ciudadana/",
+    web: "./desarrollo-web/",
+    it: "./arquitectura-ti/",
+    ai: "./ia-generativa/"
+  };
+
+  // Apply outlinks
+  document.querySelectorAll("[data-outlink]").forEach(a => {
+    const key = a.getAttribute("data-outlink");
+    if (LINKS[key]) a.setAttribute("href", LINKS[key]);
+  });
+
+  // --- Theme toggle ---
+  const themeBtn = document.querySelector(".theme-toggle");
+  const themeLabel = document.querySelector(".theme-label");
+
+  function setTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    if (themeLabel) themeLabel.textContent = theme === "dark" ? "Dark" : "Light";
   }
 
-  function applyTheme(t){
-    root.setAttribute('data-theme', t);
-    if (themeToggle) {
-      themeToggle.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
-      const themeText = themeToggle.querySelector('.theme-text');
-      if (themeText) themeText.textContent = (t === 'dark' ? 'Dark' : 'Light');
-    }
-  }
+  const saved = localStorage.getItem("theme");
+  if (saved === "light" || saved === "dark") setTheme(saved);
+  else setTheme(root.getAttribute("data-theme") || "dark");
 
-  const initialTheme = getInitialTheme();
-  applyTheme(initialTheme);
+  themeBtn?.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    setTheme(current === "dark" ? "light" : "dark");
+  });
 
-  if (themeToggle){
-    themeToggle.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') || 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', next);
-      applyTheme(next);
+  // --- Mobile nav ---
+  const toggle = document.querySelector(".nav-toggle");
+  const panel = document.getElementById("nav-panel");
+  toggle?.addEventListener("click", () => {
+    const isOpen = panel?.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(!!isOpen));
+  });
+
+  // Close menu on link click (mobile)
+  panel?.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (panel.classList.contains("is-open")) {
+        panel.classList.remove("is-open");
+        toggle?.setAttribute("aria-expanded", "false");
+      }
     });
-  }
+  });
 
-
-  // Año actual en footer
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  // ------------------------------
-  // Menú móvil
-  // ------------------------------
-  const navToggle = document.getElementById('navToggle');
-  const siteNav = document.getElementById('siteNav');
-
-  if (navToggle && siteNav) {
-    navToggle.addEventListener('click', () => {
-      const open = siteNav.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-
-    // Cierra el menú al hacer click en un link
-    $$('#siteNav a').forEach(a => {
-      a.addEventListener('click', () => {
-        siteNav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  // ------------------------------
-  // Reveal on scroll (animación suave)
-  // ------------------------------
-  const revealEls = $$('.reveal');
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('is-visible');
-      });
-    }, { threshold: 0.12 });
-
-    revealEls.forEach(el => io.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('is-visible'));
-  }
-
-  // ------------------------------
-  // HERO Slider (como tu ejemplo: #heroSlides + prev/next + dots)
-  // ------------------------------
-  const slidesWrap = document.getElementById('heroSlides');
-  const prevBtn = document.getElementById('heroPrev');
-  const nextBtn = document.getElementById('heroNext');
-  const dotsWrap = document.getElementById('heroDots');
-
-  if (slidesWrap && dotsWrap) {
-    const slides = $$('.slide', slidesWrap);
-    let idx = Math.max(0, slides.findIndex(s => s.classList.contains('is-active')));
-
-    // Construye dots en base a cantidad de slides
-    dotsWrap.innerHTML = slides.map((_, i) =>
-      `<button type="button" class="dot ${i===idx?'is-active':''}" role="tab" aria-label="Ir a la diapositiva ${i+1}" aria-selected="${i===idx?'true':'false'}" data-dot="${i}"></button>`
-    ).join('');
-
-    const dots = $$('.dot', dotsWrap);
-
-    function setActive(next){
-      idx = (next + slides.length) % slides.length;
-      slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
-      dots.forEach((d, i) => {
-        const on = i === idx;
-        d.classList.toggle('is-active', on);
-        d.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
+  // Close on outside click
+  document.addEventListener("click", (e) => {
+    if (!panel || !toggle) return;
+    const t = e.target;
+    if (!(t instanceof Element)) return;
+    if (panel.classList.contains("is-open") && !panel.contains(t) && !toggle.contains(t)) {
+      panel.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
     }
+  });
 
-    // Autoplay (puedes desactivarlo si quieres)
-    const AUTOPLAY_MS = 6500;
-    let timer = null;
-    const start = () => {
-      stop();
-      timer = window.setInterval(() => setActive(idx + 1), AUTOPLAY_MS);
-    };
-    const stop = () => {
-      if (timer) window.clearInterval(timer);
-      timer = null;
-    };
+  // --- Hero slider (full) ---
+  const track = document.querySelector("[data-slider-track]");
+  const slides = Array.from(document.querySelectorAll(".hero-slide"));
+  const dots = Array.from(document.querySelectorAll("[data-slider-dot]"));
+  const prev = document.querySelector("[data-slider-prev]");
+  const next = document.querySelector("[data-slider-next]");
 
-    if (prevBtn) prevBtn.addEventListener('click', () => { setActive(idx - 1); start(); });
-    if (nextBtn) nextBtn.addEventListener('click', () => { setActive(idx + 1); start(); });
+  let index = 0;
+  let timer = null;
 
-    dots.forEach(d => d.addEventListener('click', () => {
-      const n = Number(d.getAttribute('data-dot') || '0');
-      setActive(n);
-      start();
-    }));
+  function show(i) {
+    index = (i + slides.length) % slides.length;
+    slides.forEach((s, idx) => s.classList.toggle("is-active", idx === index));
+    dots.forEach((d, idx) => d.classList.toggle("is-active", idx === index));
+  }
 
-    // Pausar autoplay al hover para mejor UX
-    const sliderRoot = slidesWrap.closest('.hero-slider');
-    if (sliderRoot) {
-      sliderRoot.addEventListener('mouseenter', stop);
-      sliderRoot.addEventListener('mouseleave', start);
-    }
+  function start() {
+    stop();
+    timer = setInterval(() => show(index + 1), 6500);
+  }
+  function stop() {
+    if (timer) clearInterval(timer);
+    timer = null;
+  }
 
-    setActive(idx);
+  dots.forEach(d => d.addEventListener("click", () => {
+    const i = Number(d.getAttribute("data-slider-dot") || "0");
+    show(i);
     start();
-  }
+  }));
 
-  // ------------------------------
-  // Proyectos (selector + navegación)
-  // ------------------------------
-  const projectList = document.getElementById('projectList');
-  const projectPanels = Array.from(document.querySelectorAll('[data-project-panel]'));
-  const projPrev = document.getElementById('projPrev');
-  const projNext = document.getElementById('projNext');
-  const projCount = document.getElementById('projCount');
+  prev?.addEventListener("click", () => { show(index - 1); start(); });
+  next?.addEventListener("click", () => { show(index + 1); start(); });
 
-  let pIdx = 0;
+  // Pause on hover (desktop)
+  const hero = document.querySelector(".hero-slider");
+  hero?.addEventListener("mouseenter", stop);
+  hero?.addEventListener("mouseleave", start);
 
-  function setProject(next){
-    pIdx = (next + projectPanels.length) % projectPanels.length;
-    projectPanels.forEach((p, i) => p.classList.toggle('is-active', i === pIdx));
+  // Swipe (mobile)
+  let startX = null;
+  hero?.addEventListener("touchstart", (e) => {
+    startX = e.changedTouches[0]?.clientX ?? null;
+  }, { passive: true });
 
-    const items = projectList ? Array.from(projectList.querySelectorAll('[data-project]')) : [];
-    items.forEach((it, i) => it.classList.toggle('is-active', i === pIdx));
+  hero?.addEventListener("touchend", (e) => {
+    if (startX == null) return;
+    const endX = e.changedTouches[0]?.clientX ?? startX;
+    const dx = endX - startX;
+    if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+    start();
+    startX = null;
+  }, { passive: true });
 
-    if (projCount) projCount.textContent = `${pIdx + 1} / ${projectPanels.length}`;
-  }
+  show(0);
+  start();
 
-  if (projectList) {
-    Array.from(projectList.querySelectorAll('[data-project]')).forEach(btn => {
-      btn.addEventListener('click', () => {
-        const n = Number(btn.getAttribute('data-project') || '0');
-        setProject(n);
+  // --- Cases switcher ---
+  const CASES = [
+    {
+      hero: "img/hero-data.svg",
+      title: "Lakehouse para analítica",
+      desc: "Arquitectura con almacenamiento escalable, versionado y costos controlados.",
+      tags: ["Spark", "Delta/Iceberg", "S3/ADLS/GCS", "Terraform"],
+      bullets: ["Ingesta y estandarización de fuentes", "Capas Bronze/Silver/Gold", "Monitoreo y alertas"],
+      linkKey: "data"
+    },
+    {
+      hero: "img/hero-cyber.svg",
+      title: "Taller anti‑estafas",
+      desc: "Sesión práctica con ejemplos reales: phishing, SIM swap, malware e IA.",
+      tags: ["Phishing", "SIM swap", "Deepfakes", "Buenas prácticas"],
+      bullets: ["Actividades con casos reales", "Checklist de prevención", "Guía para familia y equipos"],
+      linkKey: "cyber"
+    },
+    {
+      hero: "img/hero-web.svg",
+      title: "Sitio PyME",
+      desc: "Landing moderna con catálogo simple, WhatsApp y SEO básico.",
+      tags: ["Responsive", "Performance", "Formulario", "Plantillas"],
+      bullets: ["Diseño por rubro", "CTA claros y medibles", "Entrega lista para publicar"],
+      linkKey: "web"
+    },
+    {
+      hero: "img/hero-it.svg",
+      title: "Oficina inicial",
+      desc: "Compra inteligente, armado y puesta en marcha de infraestructura de oficina.",
+      tags: ["PCs por volumen", "Red & Wi‑Fi", "Licencias", "Soporte"],
+      bullets: ["Cotización y comparativa", "Instalación y configuración", "Controles básicos de administrador"],
+      linkKey: "it"
+    }
+  ];
+
+  const caseButtons = Array.from(document.querySelectorAll(".case-item"));
+  const caseHero = document.querySelector("[data-case-hero]");
+  const caseTitle = document.querySelector("[data-case-title]");
+  const caseDesc = document.querySelector("[data-case-desc]");
+  const caseTags = document.querySelector("[data-case-tags]");
+  const caseBullets = document.querySelector("[data-case-bullets]");
+
+  function renderCase(i) {
+    const c = CASES[i];
+    if (!c) return;
+    caseButtons.forEach((b, idx) => b.classList.toggle("is-active", idx === i));
+    if (caseHero) caseHero.setAttribute("src", c.hero);
+    if (caseTitle) caseTitle.textContent = c.title;
+    if (caseDesc) caseDesc.textContent = c.desc;
+
+    if (caseTags) {
+      caseTags.innerHTML = "";
+      c.tags.forEach(t => {
+        const span = document.createElement("span");
+        span.className = "pill";
+        span.textContent = t;
+        caseTags.appendChild(span);
       });
+    }
+
+    if (caseBullets) {
+      caseBullets.innerHTML = "";
+      c.bullets.forEach(t => {
+        const li = document.createElement("li");
+        li.textContent = t;
+        caseBullets.appendChild(li);
+      });
+    }
+
+    // Update first outlink in case section
+    const link = document.querySelector("#cases .links a[data-outlink]");
+    if (link) link.setAttribute("href", LINKS[c.linkKey] || "#");
+  }
+
+  caseButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const i = Number(btn.getAttribute("data-case") || "0");
+      renderCase(i);
+    });
+  });
+
+  renderCase(0);
+
+
+  // =========================
+  // Carouseles (solo Hub)
+  // =========================
+  function initCarousels(){
+    const carousels = document.querySelectorAll(".carousel[data-carousel]");
+    carousels.forEach((car) => {
+      const track = car.querySelector(".carousel-track");
+      const prev = car.querySelector(".carousel-btn.prev");
+      const next = car.querySelector(".carousel-btn.next");
+      if (!track || !prev || !next) return;
+
+      const step = () => {
+        const first = track.querySelector(":scope > *");
+        if (!first) return Math.max(320, track.clientWidth * 0.9);
+        const cs = getComputedStyle(track);
+        const gap = parseFloat(cs.gap || cs.columnGap || "0") || 0;
+        const w = first.getBoundingClientRect().width || 0;
+        return Math.max(240, w + gap);
+      };
+
+      const update = () => {
+        const max = track.scrollWidth - track.clientWidth;
+        const x = track.scrollLeft;
+        prev.disabled = x <= 2;
+        next.disabled = x >= (max - 2);
+      };
+
+      prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+      next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+
+      let raf = 0;
+      track.addEventListener("scroll", () => {
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(update);
+      });
+      window.addEventListener("resize", update);
+      update();
     });
   }
 
-  if (projPrev) projPrev.addEventListener('click', () => setProject(pIdx - 1));
-  if (projNext) projNext.addEventListener('click', () => setProject(pIdx + 1));
-  setProject(0);
-
-  // ------------------------------
-  // Form demo (sin backend)
-  // ------------------------------
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fd = new FormData(form);
-      const name = String(fd.get('name') || '');
-      const subject = String(fd.get('subject') || '');
-      alert(`Gracias, ${name || '¡'}\nTu mensaje (“${subject || 'sin asunto'}”) fue registrado como demo.\nIntegra un backend para envío real.`);
-      form.reset();
-    });
-  }
+  initCarousels();
 })();

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16A34A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#0B1020"/>
+  <g opacity="0.9">
+    <circle cx="820" cy="300" r="220" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.30)" stroke-width="6"/>
+    <path d="M760 290l50 50 95-120" fill="none" stroke="url(#g3)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g opacity="0.8" stroke="rgba(255,255,255,0.22)" stroke-width="2">
+    <path d="M-1200 700 L0 -100" />
+<path d="M-1080 700 L120 -100" />
+<path d="M-960 700 L240 -100" />
+<path d="M-840 700 L360 -100" />
+<path d="M-720 700 L480 -100" />
+<path d="M-600 700 L600 -100" />
+<path d="M-480 700 L720 -100" />
+<path d="M-360 700 L840 -100" />
+<path d="M-240 700 L960 -100" />
+<path d="M-120 700 L1080 -100" />
+<path d="M0 700 L1200 -100" />
+<path d="M120 700 L1320 -100" />
+<path d="M240 700 L1440 -100" />
+<path d="M360 700 L1560 -100" />
+<path d="M480 700 L1680 -100" />
+<path d="M600 700 L1800 -100" />
+<path d="M720 700 L1920 -100" />
+<path d="M840 700 L2040 -100" />
+<path d="M960 700 L2160 -100" />
+<path d="M1080 700 L2280 -100" />
+  </g>
+  <text x="70" y="110" fill="rgba(255,255,255,0.70)" font-family="Arial, sans-serif" font-size="30">Asesoría para PyMEs</text>
+  <text x="70" y="160" fill="rgba(255,255,255,0.92)" font-family="Arial, sans-serif" font-size="44" font-weight="700">Políticas, prevención y cultura</text>
+</svg>

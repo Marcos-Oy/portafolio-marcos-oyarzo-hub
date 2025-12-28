@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00C2FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#16A34A" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="r" cx="70%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#0B1020"/>
+  <circle cx="900" cy="220" r="360" fill="url(#r)"/>
+  <path d="M180 640 C 260 420, 420 380, 560 520 C 700 660, 860 620, 1020 420"
+        fill="none" stroke="url(#g)" stroke-width="18" stroke-linecap="round" opacity="0.85"/>
+  <g opacity="0.9">
+    <path d="M600 190c-120 0-220 60-220 60v160c0 170 220 260 220 260s220-90 220-260V250s-100-60-220-60z"
+      fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.35)" stroke-width="6"/>
+    <path d="M600 325a70 70 0 1 0 0 140a70 70 0 0 0 0-140z"
+      fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.45)" stroke-width="6"/>
+    <path d="M600 405v85" stroke="rgba(255,255,255,0.55)" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="60" y="105" fill="rgba(255,255,255,0.70)" font-family="Arial, sans-serif" font-size="30">Ciberseguridad Ciudadana</text>
+  <text x="60" y="150" fill="rgba(255,255,255,0.92)" font-family="Arial, sans-serif" font-size="44" font-weight="700">Protección digital para la vida real</text>
+</svg>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Placeholder SERVICIO IA (reemplaza por tu imagen real) -->
+  <defs>
+    <linearGradient id="s1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00B8D9" stop-opacity="0.95"/>
+      <stop offset="0.6" stop-color="#7C3AED" stop-opacity="0.90"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="s2" cx="0.35" cy="0.30" r="0.9">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="24" y="24" width="592" height="432" rx="28" fill="url(#s1)"/>
+  <rect x="48" y="54" width="544" height="372" rx="24" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Chip / brain icon -->
+  <g opacity="0.75" stroke="#FFFFFF" stroke-width="2">
+    <rect x="238" y="132" width="164" height="164" rx="18" fill="rgba(255,255,255,0.06)"/>
+    <path d="M320 152V120M320 308V340M248 214H216M392 214H424" />
+    <path d="M270 182C286 168 310 166 320 182C330 166 354 168 370 182C388 200 382 232 360 240C382 250 388 280 370 296C354 312 330 310 320 294C310 310 286 312 270 296C252 280 258 250 280 240C258 232 252 200 270 182Z" fill="rgba(255,255,255,0.08)"/>
+  </g>
+
+  <!-- Nodes -->
+  <g opacity="0.65" fill="#FFFFFF">
+    <circle cx="118" cy="128" r="6"/>
+    <circle cx="522" cy="140" r="6"/>
+    <circle cx="520" cy="338" r="6"/>
+    <circle cx="126" cy="356" r="6"/>
+  </g>
+  <g opacity="0.28" stroke="#FFFFFF" stroke-width="2">
+    <path d="M126 356C168 320 202 292 238 260"/>
+    <path d="M118 128C170 144 208 164 238 186"/>
+    <path d="M402 186C438 166 476 150 522 140"/>
+    <path d="M402 260C446 290 480 314 520 338"/>
+  </g>
+
+  <text x="72" y="412" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="28" font-weight="800" fill="#FFFFFF" opacity="0.9">IA Generativa</text>
+</svg>

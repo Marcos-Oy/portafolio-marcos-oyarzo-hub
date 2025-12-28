@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="0.55" stop-color="#0D1B2A"/>
+      <stop offset="1" stop-color="#120B2E"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0.9"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="800" fill="url(#g)"/>
+  <rect width="1400" height="800" fill="url(#grid)"/>
+
+  <circle cx="250" cy="210" r="140" fill="url(#a)" opacity="0.12"/>
+  <circle cx="1080" cy="160" r="180" fill="url(#a)" opacity="0.10"/>
+  <circle cx="980" cy="620" r="220" fill="url(#a)" opacity="0.10"/>
+
+  <g stroke="url(#a)" stroke-width="2" opacity="0.55">
+    <path d="M220 520 C420 420, 560 560, 760 470 S1080 360, 1200 460" fill="none"/>
+    <path d="M260 260 C420 240, 520 320, 680 300 S960 220, 1180 260" fill="none" opacity="0.35"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <g fill="#00E5FF" opacity="0.9">
+      <circle cx="220" cy="520" r="6"/>
+      <circle cx="430" cy="440" r="6"/>
+      <circle cx="620" cy="540" r="6"/>
+      <circle cx="760" cy="470" r="6"/>
+      <circle cx="950" cy="400" r="6"/>
+      <circle cx="1200" cy="460" r="6"/>
+    </g>
+    <g fill="#A855F7" opacity="0.9">
+      <circle cx="260" cy="260" r="5"/>
+      <circle cx="520" cy="310" r="5"/>
+      <circle cx="680" cy="300" r="5"/>
+      <circle cx="960" cy="240" r="5"/>
+      <circle cx="1180" cy="260" r="5"/>
+    </g>
+  </g>
+
+  <g font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" fill="#EAF2FF">
+    <text x="90" y="150" font-size="18" letter-spacing="0.22em" fill="#00E5FF" opacity="0.9">PROMPT ENGINEERING</text>
+    <text x="90" y="240" font-size="70" font-weight="800">Chatbots & Soporte</text>
+    <text x="90" y="310" font-size="36" font-weight="700" fill="#D8E6FF" opacity="0.95">Bases de conocimiento, tone-of-voice y QA</text>
+    <text x="90" y="370" font-size="22" fill="#B7C7E6" opacity="0.85">Plantillas · Auditoría · Automatización · Entrenamiento</text>
+  </g>
+
+  <g opacity="0.9">
+    <rect x="90" y="430" rx="18" ry="18" width="420" height="140" fill="#0B1220" opacity="0.55" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="120" y="480" font-family="Inter, system-ui" font-size="18" fill="#B7C7E6">Ejemplo visual (reemplaza por tu imagen)</text>
+    <text x="120" y="520" font-family="Inter, system-ui" font-size="14" fill="#9BB0D3">img/hero-*.svg → coloca tus imágenes reales</text>
+  </g>
+</svg>

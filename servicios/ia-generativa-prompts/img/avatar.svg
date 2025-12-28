@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#2B1055"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" rx="60" fill="url(#bg)"/>
+  <circle cx="450" cy="330" r="150" fill="url(#a)" opacity="0.18"/>
+  <circle cx="450" cy="330" r="120" fill="#FFFFFF" opacity="0.06"/>
+  <path d="M290 700c40-120 150-180 160-180s120 60 160 180" fill="#FFFFFF" opacity="0.06"/>
+  <circle cx="450" cy="320" r="86" fill="#FFFFFF" opacity="0.10"/>
+  <rect x="220" y="750" width="460" height="80" rx="22" fill="#0B1220" opacity="0.55" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <text x="450" y="802" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="22" fill="#D8E6FF">Foto del consultor</text>
+  <text x="450" y="834" text-anchor="middle" font-family="Inter, system-ui" font-size="14" fill="#9BB0D3">Reemplaza img/avatar.svg por tu foto</text>
+</svg>
