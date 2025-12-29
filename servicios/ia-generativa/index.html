@@ -1,702 +1,533 @@
-<!doctype html>
-<html lang="es" data-theme="dark">
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Consultor en IA Generativa e Ingeniería de Prompts: estrategia, auditoría, automatización y capacitación." />
-  <title>Nombre Apellido — IA Generativa & Prompt Engineering</title>
-
-  <!-- Tipografía: puedes reemplazar Inter por otra fuente si lo deseas -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-
-<body>
-  <!-- =========================
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Consultor en IA Generativa e Ingeniería de Prompts: estrategia, auditoría, automatización y capacitación." name="description"/>
+<title>Marcos Oyarzo — IA Generativa &amp; Prompt Engineering</title>
+<link href="../../img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<!-- Tipografía: puedes reemplazar Inter por otra fuente si lo deseas -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="../../css/pages.css" rel="stylesheet"/><script data-theme-bootstrap="true">(function(){try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script></head>
+<body class="unified" data-base="../../" data-page="service"><a class="g-skip" href="#main">Saltar al contenido</a><div id="siteHeader"></div><div id="waFloat"></div>
+<!-- =========================
        HEADER / NAV
        - Modifica nombre y rol aquí
        ========================= -->
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Ir al inicio">
-        <img src="img/logo.svg" alt="Logo" />
-        <span class="title">
-          <span class="name">Nombre Apellido</span>
-          <span class="role">Consultor IA Generativa • Prompt Engineering</span>
-        </span>
-      </a>
-
-      <nav class="nav" aria-label="Navegación principal">
-        <!-- <a href="#about">Sobre mí</a> -->
-        <a href="#consultoria">Consultoría</a>
-        <a href="#capacitacion">Capacitación</a>
-        <a href="#nichos">Nichos</a>
-        <a href="#casos">Casos</a>
-        <a href="#testimonios">Testimonios</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-
-      <div class="header-actions">
-        <a class="btn primary hide-sm" href="#contacto">Agendar</a>
-
-        <button class="btn" id="themeToggle" type="button" aria-label="Cambiar tema">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" id="themeIcon">
-            <path d="M21 12.8A8.5 8.5 0 0 1 11.2 3a6.6 6.6 0 1 0 9.8 9.8Z" fill="currentColor"></path>
-          </svg>
-          <span id="themeLabel">Dark</span>
-        </button>
-
-        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Panel móvil -->
-    <div class="mobile-panel" id="mobilePanel" aria-label="Menú móvil">
-      <!-- <a href="#about">Sobre mí</a> -->
-      <a href="#consultoria">Consultoría</a>
-      <a href="#capacitacion">Capacitación</a>
-      <a href="#nichos">Nichos</a>
-      <a href="#casos">Casos</a>
-      <a href="#testimonios">Testimonios</a>
-      <a href="#contacto">Contacto</a>
-      <div class="row">
-        <a class="btn primary" href="#contacto" style="flex:1; text-align:center;">Agendar</a>
-        <button class="btn" id="themeToggleMobile" type="button" style="flex:1;" aria-label="Cambiar tema (móvil)">
-          Tema
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="top">
-    <!-- =========================
+<main id="top"><div id="top"></div>
+<!-- =========================
          HERO SLIDER (Carrusel)
          - Reemplaza imágenes:
            img/hero-1.svg, img/hero-2.svg, img/hero-3.svg
            por tus imágenes reales (ideal 1600x900)
          ========================= -->
-    <section class="hero hero--slider" aria-label="Portada">
-  <div class="hero-slider hero-slider--xl reveal" id="heroSlider" aria-label="Carrusel principal">
-    <div class="slides" id="heroSlides">
-      <!--
+<section aria-label="Portada" class="hero hero--slider">
+<div aria-label="Carrusel principal" class="hero-slider hero-slider--xl reveal" id="heroSlider">
+<div class="slides" id="heroSlides">
+<!--
         IMÁGENES:
         - Reemplaza img/hero-1.svg, hero-2.svg, hero-3.svg por fotografías o renders relacionados a IA (recomendado 1600x900).
         - Mantén el mismo nombre de archivo o actualiza el src.
       -->
-
-      <article class="slide is-active" role="group" aria-label="1 / 3">
-        <img src="img/hero-1.svg" alt="IA generativa y automatización (imagen genérica)" loading="eager">
-        <div class="slide-overlay">
-          <div class="overlay-inner">
-            <p class="kicker">IA GENERATIVA</p>
-            <h1>Consultoría en IA Generativa &amp; Prompt Engineering con foco en impacto</h1>
-            <p class="subtext">
+<article aria-label="1 / 3" class="slide is-active" role="group">
+<img alt="IA generativa y automatización (imagen genérica)" loading="eager" src="img/hero-1.svg"/>
+<div class="slide-overlay">
+<div class="overlay-inner">
+<p class="kicker">IA GENERATIVA</p>
+<h1>Consultoría en IA Generativa &amp; Prompt Engineering con foco en impacto</h1>
+<p class="subtext">
               Diagnóstico, implementación y adopción segura: productividad, calidad y control. Integro ChatGPT, Claude,
               Midjourney, DALL·E y automatizadores como Make/Zapier.
             </p>
-
-            <div class="hero-cta">
-              <a class="btn btn--solid" href="#contacto">Agendar consultoría</a>
-              <a class="btn btn--ghost" href="#consultoria">Ver servicios</a>
-            </div>
-
-            <div class="hero-metrics">
-              <div class="metric"><strong>Diagnóstico</strong><span>Casos de uso &amp; ROI</span></div>
-              <div class="metric"><strong>Prompts</strong><span>Calidad consistente</span></div>
-              <div class="metric"><strong>Automatización</strong><span>Flujos trazables</span></div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="slide" role="group" aria-label="2 / 3">
-        <img src="img/hero-2.svg" alt="Auditoría y estandarización de prompts (imagen genérica)" loading="lazy">
-        <div class="slide-overlay">
-          <div class="overlay-inner">
-            <p class="kicker">AUDITORÍA DE PROMPTS</p>
-            <h2>Optimiza, estandariza y reutiliza prompts para mejores resultados</h2>
-            <p class="subtext">
+<div class="hero-cta">
+<a class="btn btn--solid" href="#contacto">Agendar consultoría</a>
+<a class="btn btn--ghost" href="#consultoria">Ver servicios</a>
+</div>
+<div class="hero-metrics">
+<div class="metric"><strong>Diagnóstico</strong><span>Casos de uso &amp; ROI</span></div>
+<div class="metric"><strong>Prompts</strong><span>Calidad consistente</span></div>
+<div class="metric"><strong>Automatización</strong><span>Flujos trazables</span></div>
+</div>
+</div>
+</div>
+</article>
+<article aria-label="2 / 3" class="slide" role="group">
+<img alt="Auditoría y estandarización de prompts (imagen genérica)" loading="lazy" src="img/hero-2.svg"/>
+<div class="slide-overlay">
+<div class="overlay-inner">
+<p class="kicker">AUDITORÍA DE PROMPTS</p>
+<h2>Optimiza, estandariza y reutiliza prompts para mejores resultados</h2>
+<p class="subtext">
               Revisión y mejora de prompts existentes, creación de librería por roles y tareas, y guías para mantener
               consistencia entre equipos.
             </p>
-            <div class="hero-cta">
-              <a class="btn btn--solid" href="#consultoria">Solicitar auditoría</a>
-              <a class="btn btn--ghost" href="#contacto">Cotizar</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="slide" role="group" aria-label="3 / 3">
-        <img src="img/hero-3.svg" alt="Talleres y capacitación en IA (imagen genérica)" loading="lazy">
-        <div class="slide-overlay">
-          <div class="overlay-inner">
-            <p class="kicker">CAPACITACIÓN</p>
-            <h2>Talleres prácticos de IA: de básico a avanzado</h2>
-            <p class="subtext">
+<div class="hero-cta">
+<a class="btn btn--solid" href="#consultoria">Solicitar auditoría</a>
+<a class="btn btn--ghost" href="#contacto">Cotizar</a>
+</div>
+</div>
+</div>
+</article>
+<article aria-label="3 / 3" class="slide" role="group">
+<img alt="Talleres y capacitación en IA (imagen genérica)" loading="lazy" src="img/hero-3.svg"/>
+<div class="slide-overlay">
+<div class="overlay-inner">
+<p class="kicker">CAPACITACIÓN</p>
+<h2>Talleres prácticos de IA: de básico a avanzado</h2>
+<p class="subtext">
               Zero-shot, few-shot, role prompting, prompt chaining, buenas prácticas y ejercicios para marketing,
               desarrollo y operación.
             </p>
-            <div class="hero-cta">
-              <a class="btn btn--solid" href="#capacitacion">Ver talleres</a>
-              <a class="btn btn--ghost" href="#contacto">Agendar webinar</a>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <button class="slider-btn slider-btn--prev" type="button" aria-label="Anterior" id="heroPrev">
-      <span aria-hidden="true">‹</span>
-    </button>
-    <button class="slider-btn slider-btn--next" type="button" aria-label="Siguiente" id="heroNext">
-      <span aria-hidden="true">›</span>
-    </button>
-
-    <div class="slider-dots" role="tablist" aria-label="Indicadores del carrusel" id="heroDots">
-      <!-- dots injected by JS -->
-    </div>
-  </div>
+<div class="hero-cta">
+<a class="btn btn--solid" href="#capacitacion">Ver talleres</a>
+<a class="btn btn--ghost" href="#contacto">Agendar webinar</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<button aria-label="Anterior" class="slider-btn slider-btn--prev" id="heroPrev" type="button">
+<span aria-hidden="true">‹</span>
+</button>
+<button aria-label="Siguiente" class="slider-btn slider-btn--next" id="heroNext" type="button">
+<span aria-hidden="true">›</span>
+</button>
+<div aria-label="Indicadores del carrusel" class="slider-dots" id="heroDots" role="tablist">
+<!-- dots injected by JS -->
+</div>
+</div>
 </section>
-
-    <!-- =========================
+<!-- =========================
          ABOUT
          ========================= -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="kicker reveal"><span class="dot"></span> SOBRE El Servicio</div>
-        <h2 class="h2 reveal">Consultoría práctica, enfoque estratégico y ejecución</h2>
-        <p class="p reveal">
+<section class="section" id="about">
+<div class="container">
+<div class="kicker reveal"><span class="dot"></span> SOBRE El Servicio</div>
+<h2 class="h2 reveal">Consultoría práctica, enfoque estratégico y ejecución</h2>
+<p class="p reveal">
           Ayudo a profesionales, PyMEs y equipos creativos a integrar IA generativa con control: prompts de calidad,
           automatización, buenas prácticas de seguridad y entrenamiento.
         </p>
-
-        <div class="about" style="margin-top:18px;">
-          <div class="card reveal">
-            <div class="card-inner photo">
-              <!-- Reemplaza img/avatar.svg por tu foto -->
-              <img src="img/avatar.svg" alt="Foto del consultor (placeholder)" loading="lazy" />
-              <div class="about stats">
-                <div class="stat">
-                  <div class="slabel">Enfoque</div>
-                  <div class="svalue">Calidad, seguridad y productividad</div>
-                </div>
-                <div class="stat">
-                  <div class="slabel">Método</div>
-                  <div class="svalue">Diagnóstico → Plantillas → Automatización</div>
-                </div>
-                <div class="stat">
-                  <div class="slabel">Entregables</div>
-                  <div class="svalue">Guías, rúbricas, workflows y capacitación</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card reveal">
-            <div class="card-inner">
-              <h3 class="card-title">Perfil profesional</h3>
-              <p>
+<div class="about" style="margin-top:18px;">
+<div class="card reveal">
+<div class="card-inner photo">
+<!-- Reemplaza img/avatar.svg por tu foto -->
+<img alt="Foto del consultor (placeholder)" loading="lazy" src="img/avatar.svg"/>
+<div class="about stats">
+<div class="stat">
+<div class="slabel">Enfoque</div>
+<div class="svalue">Calidad, seguridad y productividad</div>
+</div>
+<div class="stat">
+<div class="slabel">Método</div>
+<div class="svalue">Diagnóstico → Plantillas → Automatización</div>
+</div>
+<div class="stat">
+<div class="slabel">Entregables</div>
+<div class="svalue">Guías, rúbricas, workflows y capacitación</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card reveal">
+<div class="card-inner">
+<h3 class="card-title">Perfil profesional</h3>
+<p>
                 Consultor en IA generativa, NLP e ingeniería de prompts. Diseño estrategias de adopción, audito prompts y
                 construyo sistemas de trabajo reproducibles. Mi objetivo es que la IA se vuelva un activo: medible,
                 gobernable y alineado al negocio.
               </p>
-
-              <div class="hr"></div>
-
-              <div class="two-col">
-                <div>
-                  <h3 class="card-title">Herramientas dominadas</h3>
-                  <div class="tagrow">
-                    <span class="tag"><span class="mini"></span> ChatGPT</span>
-                    <span class="tag"><span class="mini"></span> Claude</span>
-                    <span class="tag"><span class="mini"></span> Midjourney</span>
-                    <span class="tag"><span class="mini"></span> DALL·E</span>
-                    <span class="tag"><span class="mini"></span> Stable Diffusion</span>
-                    <span class="tag"><span class="mini"></span> Make</span>
-                    <span class="tag"><span class="mini"></span> Zapier</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 class="card-title">Certificaciones (ejemplo)</h3>
-                  <!-- Edita estas certificaciones por las tuyas -->
-                  <ul class="list">
-                    <li>Certificación en IA Generativa (reemplazar).</li>
-                    <li>Prompt Engineering avanzado (reemplazar).</li>
-                    <li>Automatización no-code (reemplazar).</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="hr"></div>
-
-              <div class="hero-cta">
-                <a class="btn primary" href="#contacto">Agenda una reunión</a>
-                <a class="btn" href="#consultoria">Ver servicios</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
+<div class="hr"></div>
+<div class="two-col">
+<div>
+<h3 class="card-title">Herramientas dominadas</h3>
+<div class="tagrow">
+<span class="tag"><span class="mini"></span> ChatGPT</span>
+<span class="tag"><span class="mini"></span> Claude</span>
+<span class="tag"><span class="mini"></span> Midjourney</span>
+<span class="tag"><span class="mini"></span> DALL·E</span>
+<span class="tag"><span class="mini"></span> Stable Diffusion</span>
+<span class="tag"><span class="mini"></span> Make</span>
+<span class="tag"><span class="mini"></span> Zapier</span>
+</div>
+</div>
+<div>
+<h3 class="card-title">Certificaciones (ejemplo)</h3>
+<!-- Edita estas certificaciones por las tuyas -->
+<ul class="list">
+<li>Certificación en IA Generativa (reemplazar).</li>
+<li>Prompt Engineering avanzado (reemplazar).</li>
+<li>Automatización no-code (reemplazar).</li>
+</ul>
+</div>
+</div>
+<div class="hr"></div>
+<div class="hero-cta">
+<a class="btn primary" href="#contacto">Agenda una reunión</a>
+<a class="btn" href="#consultoria">Ver servicios</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
          CONSULTORÍA ESTRATÉGICA
          ========================= -->
-    <section class="section" id="consultoria">
-      <div class="container">
-        <div class="kicker reveal"><span class="dot"></span> ASESORÍA Y CONSULTORÍA</div>
-        <h2 class="h2 reveal">Implementación con impacto, sin perder control</h2>
-        <p class="p reveal">
+<div class="g-anchor" id="services"></div><section class="section" id="consultoria">
+<div class="container">
+<div class="kicker reveal"><span class="dot"></span> ASESORÍA Y CONSULTORÍA</div>
+<h2 class="h2 reveal">Implementación con impacto, sin perder control</h2>
+<p class="p reveal">
           Servicios orientados a resultados: identificar oportunidades, diseñar la estrategia de adopción y asegurar calidad
           con auditoría y estandarización de prompts.
         </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card reveal" style="grid-column: span 4;">
-            <div class="card-inner">
-              <h3 class="card-title">1) Diagnóstico de necesidades</h3>
-              <p>Evaluación de procesos donde la IA puede aportar valor de forma inmediata.</p>
-              <ul class="list">
-                <li>Automatización de contenido y documentación.</li>
-                <li>Soporte y atención al cliente (flujos y macros).</li>
-                <li>Análisis, síntesis y reporte de información.</li>
-                <li>Optimización de flujos internos y coordinación.</li>
-              </ul>
-              <div class="tagrow">
-                <span class="tag"><span class="mini"></span> Mapa de procesos</span>
-                <span class="tag"><span class="mini"></span> ROI</span>
-                <span class="tag"><span class="mini"></span> Quick wins</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card reveal" style="grid-column: span 4;">
-            <div class="card-inner">
-              <h3 class="card-title">2) Estrategia de implementación</h3>
-              <p>Planes personalizados para integrar herramientas y automatización.</p>
-              <ul class="list">
-                <li>Selección de herramientas: ChatGPT, Claude, Midjourney, DALL·E, SD.</li>
-                <li>Arquitectura de prompts: plantillas y librerías.</li>
-                <li>Automatización: Make, Zapier y flujos con QA.</li>
-                <li>Gobierno: privacidad, roles, límites y políticas.</li>
-              </ul>
-              <div class="tagrow">
-                <span class="tag"><span class="mini"></span> Roadmap</span>
-                <span class="tag"><span class="mini"></span> Playbooks</span>
-                <span class="tag"><span class="mini"></span> Automatización</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card reveal" style="grid-column: span 4;">
-            <div class="card-inner">
-              <h3 class="card-title">3) Auditoría de prompts</h3>
-              <p>Revisión y optimización para calidad, consistencia y eficiencia.</p>
-              <ul class="list">
-                <li>Estandarización de estilo y tono.</li>
-                <li>Mejoras de estructura, variables y contexto.</li>
-                <li>Rúbricas y evaluación (golden set).</li>
-                <li>Seguridad: datos sensibles, inyección y buenas prácticas.</li>
-              </ul>
-              <div class="tagrow">
-                <span class="tag"><span class="mini"></span> QA</span>
-                <span class="tag"><span class="mini"></span> Rúbricas</span>
-                <span class="tag"><span class="mini"></span> Seguridad</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card reveal" style="margin-top:18px;">
-          <div class="card-inner">
-            <h3 class="card-title">Entregables típicos</h3>
-            <div class="two-col">
-              <ul class="list">
-                <li>Documento de diagnóstico + backlog priorizado.</li>
-                <li>Librería de prompts (plantillas + ejemplos).</li>
-                <li>Guía de estilo (tone-of-voice) y estándares.</li>
-              </ul>
-              <ul class="list">
-                <li>Workflows automatizados (Make/Zapier) + manual.</li>
-                <li>Checklist de privacidad y manejo de datos.</li>
-                <li>Capacitación del equipo y handoff.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
+<div class="grid" style="margin-top:18px;">
+<div class="card reveal" style="grid-column: span 4;">
+<div class="card-inner">
+<h3 class="card-title">1) Diagnóstico de necesidades</h3>
+<p>Evaluación de procesos donde la IA puede aportar valor de forma inmediata.</p>
+<ul class="list">
+<li>Automatización de contenido y documentación.</li>
+<li>Soporte y atención al cliente (flujos y macros).</li>
+<li>Análisis, síntesis y reporte de información.</li>
+<li>Optimización de flujos internos y coordinación.</li>
+</ul>
+<div class="tagrow">
+<span class="tag"><span class="mini"></span> Mapa de procesos</span>
+<span class="tag"><span class="mini"></span> ROI</span>
+<span class="tag"><span class="mini"></span> Quick wins</span>
+</div>
+</div>
+</div>
+<div class="card reveal" style="grid-column: span 4;">
+<div class="card-inner">
+<h3 class="card-title">2) Estrategia de implementación</h3>
+<p>Planes personalizados para integrar herramientas y automatización.</p>
+<ul class="list">
+<li>Selección de herramientas: ChatGPT, Claude, Midjourney, DALL·E, SD.</li>
+<li>Arquitectura de prompts: plantillas y librerías.</li>
+<li>Automatización: Make, Zapier y flujos con QA.</li>
+<li>Gobierno: privacidad, roles, límites y políticas.</li>
+</ul>
+<div class="tagrow">
+<span class="tag"><span class="mini"></span> Roadmap</span>
+<span class="tag"><span class="mini"></span> Playbooks</span>
+<span class="tag"><span class="mini"></span> Automatización</span>
+</div>
+</div>
+</div>
+<div class="card reveal" style="grid-column: span 4;">
+<div class="card-inner">
+<h3 class="card-title">3) Auditoría de prompts</h3>
+<p>Revisión y optimización para calidad, consistencia y eficiencia.</p>
+<ul class="list">
+<li>Estandarización de estilo y tono.</li>
+<li>Mejoras de estructura, variables y contexto.</li>
+<li>Rúbricas y evaluación (golden set).</li>
+<li>Seguridad: datos sensibles, inyección y buenas prácticas.</li>
+</ul>
+<div class="tagrow">
+<span class="tag"><span class="mini"></span> QA</span>
+<span class="tag"><span class="mini"></span> Rúbricas</span>
+<span class="tag"><span class="mini"></span> Seguridad</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card reveal" style="margin-top:18px;">
+<div class="card-inner">
+<h3 class="card-title">Entregables típicos</h3>
+<div class="two-col">
+<ul class="list">
+<li>Documento de diagnóstico + backlog priorizado.</li>
+<li>Librería de prompts (plantillas + ejemplos).</li>
+<li>Guía de estilo (tone-of-voice) y estándares.</li>
+</ul>
+<ul class="list">
+<li>Workflows automatizados (Make/Zapier) + manual.</li>
+<li>Checklist de privacidad y manejo de datos.</li>
+<li>Capacitación del equipo y handoff.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
          CAPACITACIÓN
          ========================= -->
-    <section class="section" id="capacitacion">
-      <div class="container">
-        <div class="kicker reveal"><span class="dot"></span> FORMACIÓN</div>
-        <h2 class="h2 reveal">De fundamentos a sistemas de prompts</h2>
-        <p class="p reveal">
+<section class="section" id="capacitacion">
+<div class="container">
+<div class="kicker reveal"><span class="dot"></span> FORMACIÓN</div>
+<h2 class="h2 reveal">De fundamentos a sistemas de prompts</h2>
+<p class="p reveal">
           Capacitación práctica, con ejercicios y ejemplos por rol. Ideal para marketing, operaciones, equipos técnicos y sector creativo.
         </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card reveal" style="grid-column: span 6;">
-            <div class="card-inner">
-              <h3 class="card-title">1) Talleres prácticos (básico → avanzado)</h3>
-              <p>Entrenamiento por niveles con actividades y feedback.</p>
-              <ul class="list">
-                <li>Fundamentos de IA generativa y límites.</li>
-                <li>Técnicas: Zero-shot, Few-shot, Chain-of-thought*, prompt chaining, role prompting.</li>
-                <li>Uso de herramientas específicas: GPT-4, Claude, Midjourney, Stable Diffusion y open-source.</li>
-                <li>Buenas prácticas: privacidad, sesgos, verificación y trazabilidad.</li>
-              </ul>
-              <p class="small" style="margin-top:10px;">
+<div class="grid" style="margin-top:18px;">
+<div class="card reveal" style="grid-column: span 6;">
+<div class="card-inner">
+<h3 class="card-title">1) Talleres prácticos (básico → avanzado)</h3>
+<p>Entrenamiento por niveles con actividades y feedback.</p>
+<ul class="list">
+<li>Fundamentos de IA generativa y límites.</li>
+<li>Técnicas: Zero-shot, Few-shot, Chain-of-thought*, prompt chaining, role prompting.</li>
+<li>Uso de herramientas específicas: GPT-4, Claude, Midjourney, Stable Diffusion y open-source.</li>
+<li>Buenas prácticas: privacidad, sesgos, verificación y trazabilidad.</li>
+</ul>
+<p class="small" style="margin-top:10px;">
                 *Nota: en algunos contextos se recomienda no solicitar explicitación de razonamiento; se enseñan alternativas seguras (rúbricas, verificación, auto-chequeos).
               </p>
-            </div>
-          </div>
-
-          <div class="card reveal" style="grid-column: span 6;">
-            <div class="card-inner">
-              <h3 class="card-title">2) Webinars temáticos</h3>
-              <p>Charlas enfocadas por caso de uso, con guías descargables.</p>
-              <ul class="list">
-                <li>“Prompts para marketing” (ideas, copies, calendario).</li>
-                <li>“IA para desarrolladores” (doc, tests, refactor, búsqueda).</li>
-                <li>“Automatización con IA para emprendedores” (ventas, soporte, reportes).</li>
-                <li>“IA visual para creativos” (iteración y consistencia).</li>
-              </ul>
-
-              <div class="hr"></div>
-
-              <h3 class="card-title">Formato</h3>
-              <ul class="list">
-                <li>Presencial u online.</li>
-                <li>Material de apoyo y plantillas.</li>
-                <li>Ejercicios guiados y Q&A.</li>
-              </ul>
-              <div class="hero-cta" style="margin-top:14px;">
-                <a class="btn primary" href="#contacto">Cotizar capacitación</a>
-                <a class="btn" href="#consultoria">Ver consultoría</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- =========================
+</div>
+</div>
+<div class="card reveal" style="grid-column: span 6;">
+<div class="card-inner">
+<h3 class="card-title">2) Webinars temáticos</h3>
+<p>Charlas enfocadas por caso de uso, con guías descargables.</p>
+<ul class="list">
+<li>“Prompts para marketing” (ideas, copies, calendario).</li>
+<li>“IA para desarrolladores” (doc, tests, refactor, búsqueda).</li>
+<li>“Automatización con IA para emprendedores” (ventas, soporte, reportes).</li>
+<li>“IA visual para creativos” (iteración y consistencia).</li>
+</ul>
+<div class="hr"></div>
+<h3 class="card-title">Formato</h3>
+<ul class="list">
+<li>Presencial u online.</li>
+<li>Material de apoyo y plantillas.</li>
+<li>Ejercicios guiados y Q&amp;A.</li>
+</ul>
+<div class="hero-cta" style="margin-top:14px;">
+<a class="btn primary" href="#contacto">Cotizar capacitación</a>
+<a class="btn" href="#consultoria">Ver consultoría</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
          CASOS / PROYECTOS
          - Reemplaza imágenes case-*.svg por tus capturas reales
          ========================= -->
-    <section class="section" id="casos">
-      <div class="container">
-        <div class="kicker reveal"><span class="dot"></span> CASOS Y PROYECTOS</div>
-        <h2 class="h2 reveal">Ejemplos representativos</h2>
-        <p class="p reveal">Puedes enlazar repos, demos o artículos (botones “Ver detalle”).</p>
-
-        <div class="grid" style="margin-top:18px;">
-          <article class="card reveal" style="grid-column: span 6;">
-            <div class="case-img">
-              <img src="img/case-1.svg" alt="Caso: Auditoría de prompts (placeholder)" loading="lazy" />
-            </div>
-            <div class="card-inner">
-              <h3 class="card-title">Auditoría de prompts y sistema de calidad</h3>
-              <p>Rúbricas, plantillas, golden set y guía de estilo para consistencia.</p>
-              <div class="tagrow">
-                <span class="tag"><span class="mini"></span> QA</span>
-                <span class="tag"><span class="mini"></span> Librería</span>
-                <span class="tag"><span class="mini"></span> Gobernanza</span>
-              </div>
-              <div class="case-actions" style="margin-top:14px;">
-                <a class="btn primary" href="#contacto">Ver detalle</a>
-                <a class="btn" href="#consultoria">Ver servicio</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal" style="grid-column: span 6;">
-            <div class="case-img">
-              <img src="img/case-2.svg" alt="Caso: Automatización IA (placeholder)" loading="lazy" />
-            </div>
-            <div class="card-inner">
-              <h3 class="card-title">Automatización con IA para operaciones</h3>
-              <p>Make/Zapier + LLM para emails, reportes y documentación con control.</p>
-              <div class="tagrow">
-                <span class="tag"><span class="mini"></span> Zapier</span>
-                <span class="tag"><span class="mini"></span> Make</span>
-                <span class="tag"><span class="mini"></span> KPIs</span>
-              </div>
-              <div class="case-actions" style="margin-top:14px;">
-                <a class="btn primary" href="#contacto">Ver detalle</a>
-                <a class="btn" href="#capacitacion">Taller</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal" style="grid-column: span 6;">
-            <div class="case-img">
-              <img src="img/case-3.svg" alt="Caso: Chatbots y soporte (placeholder)" loading="lazy" />
-            </div>
-            <div class="card-inner">
-              <h3 class="card-title">Soporte y atención al cliente asistidos</h3>
-              <p>Macros, base de conocimiento, tone-of-voice y QA continuo.</p>
-              <div class="tagrow">
-                <span class="tag"><span class="mini"></span> Soporte</span>
-                <span class="tag"><span class="mini"></span> Knowledge base</span>
-                <span class="tag"><span class="mini"></span> Evaluación</span>
-              </div>
-              <div class="case-actions" style="margin-top:14px;">
-                <a class="btn primary" href="#contacto">Ver detalle</a>
-                <a class="btn" href="#nichos">Nicho</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card reveal" style="grid-column: span 6;">
-            <div class="case-img">
-              <img src="img/case-4.svg" alt="Caso: IA para creativos (placeholder)" loading="lazy" />
-            </div>
-            <div class="card-inner">
-              <h3 class="card-title">IA para equipos creativos</h3>
-              <p>Prompts reproducibles, iteración visual y workflows de contenido.</p>
-              <div class="tagrow">
-                <span class="tag"><span class="mini"></span> Visual</span>
-                <span class="tag"><span class="mini"></span> Storytelling</span>
-                <span class="tag"><span class="mini"></span> Plantillas</span>
-              </div>
-              <div class="case-actions" style="margin-top:14px;">
-                <a class="btn primary" href="#contacto">Ver detalle</a>
-                <a class="btn" href="#capacitacion">Webinar</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
+<div class="g-anchor" id="projects"></div><section class="section" id="casos">
+<div class="container">
+<div class="kicker reveal"><span class="dot"></span> CASOS Y PROYECTOS</div>
+<h2 class="h2 reveal">Ejemplos representativos</h2>
+<p class="p reveal">Puedes enlazar repos, demos o artículos (botones “Ver detalle”).</p>
+<div class="grid" style="margin-top:18px;">
+<article class="card reveal" style="grid-column: span 6;">
+<div class="case-img">
+<img alt="Caso: Auditoría de prompts (placeholder)" loading="lazy" src="img/case-1.svg"/>
+</div>
+<div class="card-inner">
+<h3 class="card-title">Auditoría de prompts y sistema de calidad</h3>
+<p>Rúbricas, plantillas, golden set y guía de estilo para consistencia.</p>
+<div class="tagrow">
+<span class="tag"><span class="mini"></span> QA</span>
+<span class="tag"><span class="mini"></span> Librería</span>
+<span class="tag"><span class="mini"></span> Gobernanza</span>
+</div>
+<div class="case-actions" style="margin-top:14px;">
+<a class="btn primary" href="#contacto">Ver detalle</a>
+<a class="btn" href="#consultoria">Ver servicio</a>
+</div>
+</div>
+</article>
+<article class="card reveal" style="grid-column: span 6;">
+<div class="case-img">
+<img alt="Caso: Automatización IA (placeholder)" loading="lazy" src="img/case-2.svg"/>
+</div>
+<div class="card-inner">
+<h3 class="card-title">Automatización con IA para operaciones</h3>
+<p>Make/Zapier + LLM para emails, reportes y documentación con control.</p>
+<div class="tagrow">
+<span class="tag"><span class="mini"></span> Zapier</span>
+<span class="tag"><span class="mini"></span> Make</span>
+<span class="tag"><span class="mini"></span> KPIs</span>
+</div>
+<div class="case-actions" style="margin-top:14px;">
+<a class="btn primary" href="#contacto">Ver detalle</a>
+<a class="btn" href="#capacitacion">Taller</a>
+</div>
+</div>
+</article>
+<article class="card reveal" style="grid-column: span 6;">
+<div class="case-img">
+<img alt="Caso: Chatbots y soporte (placeholder)" loading="lazy" src="img/case-3.svg"/>
+</div>
+<div class="card-inner">
+<h3 class="card-title">Soporte y atención al cliente asistidos</h3>
+<p>Macros, base de conocimiento, tone-of-voice y QA continuo.</p>
+<div class="tagrow">
+<span class="tag"><span class="mini"></span> Soporte</span>
+<span class="tag"><span class="mini"></span> Knowledge base</span>
+<span class="tag"><span class="mini"></span> Evaluación</span>
+</div>
+<div class="case-actions" style="margin-top:14px;">
+<a class="btn primary" href="#contacto">Ver detalle</a>
+<a class="btn" href="#nichos">Nicho</a>
+</div>
+</div>
+</article>
+<article class="card reveal" style="grid-column: span 6;">
+<div class="case-img">
+<img alt="Caso: IA para creativos (placeholder)" loading="lazy" src="img/case-4.svg"/>
+</div>
+<div class="card-inner">
+<h3 class="card-title">IA para equipos creativos</h3>
+<p>Prompts reproducibles, iteración visual y workflows de contenido.</p>
+<div class="tagrow">
+<span class="tag"><span class="mini"></span> Visual</span>
+<span class="tag"><span class="mini"></span> Storytelling</span>
+<span class="tag"><span class="mini"></span> Plantillas</span>
+</div>
+<div class="case-actions" style="margin-top:14px;">
+<a class="btn primary" href="#contacto">Ver detalle</a>
+<a class="btn" href="#capacitacion">Webinar</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- =========================
          TESTIMONIOS
          ========================= -->
-    <section class="section" id="testimonios">
-      <div class="container">
-        <div class="kicker reveal"><span class="dot"></span> TESTIMONIOS</div>
-        <h2 class="h2 reveal">Cortos, concretos y orientados a resultados</h2>
-        <p class="p reveal">Reemplaza por testimonios reales y logos (si aplica).</p>
-
-        <div class="carousel reveal">
-          <div class="scroller" id="testiScroller" aria-label="Carrusel de testimonios">
-            <article class="tcard">
-              <div class="thead">
-                <div class="tperson">
-                  <div class="avatar" aria-hidden="true">PM</div>
-                  <div class="tmeta">
-                    <div class="who">Product Manager</div>
-                    <div class="org">SaaS • Operaciones</div>
-                  </div>
-                </div>
-                <div class="tright">Auditoría</div>
-              </div>
-              <div class="quote">“Estandarizamos prompts y bajamos el retrabajo. La guía de estilo + rúbricas nos dio consistencia.”</div>
-            </article>
-
-            <article class="tcard">
-              <div class="thead">
-                <div class="tperson">
-                  <div class="avatar" aria-hidden="true">MK</div>
-                  <div class="tmeta">
-                    <div class="who">Marketing Lead</div>
-                    <div class="org">PyME • Contenidos</div>
-                  </div>
-                </div>
-                <div class="tright">Taller</div>
-              </div>
-              <div class="quote">“El taller fue 100% práctico. Salimos con plantillas listas y un proceso claro para iterar.”</div>
-            </article>
-
-            <article class="tcard">
-              <div class="thead">
-                <div class="tperson">
-                  <div class="avatar" aria-hidden="true">IT</div>
-                  <div class="tmeta">
-                    <div class="who">Tech Lead</div>
-                    <div class="org">Equipo Dev</div>
-                  </div>
-                </div>
-                <div class="tright">Gobierno</div>
-              </div>
-              <div class="quote">“Sumamos automatización con control y checklist de seguridad. Documentación impecable.”</div>
-            </article>
-
-            <article class="tcard">
-              <div class="thead">
-                <div class="tperson">
-                  <div class="avatar" aria-hidden="true">CR</div>
-                  <div class="tmeta">
-                    <div class="who">Director Creativo</div>
-                    <div class="org">Agencia</div>
-                  </div>
-                </div>
-                <div class="tright">Creativo</div>
-              </div>
-              <div class="quote">“Logramos consistencia visual y un flujo para producir variantes sin perder identidad.”</div>
-            </article>
-          </div>
-
-          <div class="car-controls">
-            <button class="pill" id="testiPrev" type="button" aria-label="Anterior">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15 6 9 12l6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </button>
-            <button class="pill" id="testiNext" type="button" aria-label="Siguiente">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M9 6 15 12l-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
+<section class="section" id="testimonios">
+<div class="container">
+<div class="kicker reveal"><span class="dot"></span> TESTIMONIOS</div>
+<h2 class="h2 reveal">Cortos, concretos y orientados a resultados</h2>
+<p class="p reveal">Reemplaza por testimonios reales y logos (si aplica).</p>
+<div class="carousel reveal">
+<div aria-label="Carrusel de testimonios" class="scroller" id="testiScroller">
+<article class="tcard">
+<div class="thead">
+<div class="tperson">
+<div aria-hidden="true" class="avatar">PM</div>
+<div class="tmeta">
+<div class="who">Product Manager</div>
+<div class="org">SaaS • Operaciones</div>
+</div>
+</div>
+<div class="tright">Auditoría</div>
+</div>
+<div class="quote">“Estandarizamos prompts y bajamos el retrabajo. La guía de estilo + rúbricas nos dio consistencia.”</div>
+</article>
+<article class="tcard">
+<div class="thead">
+<div class="tperson">
+<div aria-hidden="true" class="avatar">MK</div>
+<div class="tmeta">
+<div class="who">Marketing Lead</div>
+<div class="org">PyME • Contenidos</div>
+</div>
+</div>
+<div class="tright">Taller</div>
+</div>
+<div class="quote">“El taller fue 100% práctico. Salimos con plantillas listas y un proceso claro para iterar.”</div>
+</article>
+<article class="tcard">
+<div class="thead">
+<div class="tperson">
+<div aria-hidden="true" class="avatar">IT</div>
+<div class="tmeta">
+<div class="who">Tech Lead</div>
+<div class="org">Equipo Dev</div>
+</div>
+</div>
+<div class="tright">Gobierno</div>
+</div>
+<div class="quote">“Sumamos automatización con control y checklist de seguridad. Documentación impecable.”</div>
+</article>
+<article class="tcard">
+<div class="thead">
+<div class="tperson">
+<div aria-hidden="true" class="avatar">CR</div>
+<div class="tmeta">
+<div class="who">Director Creativo</div>
+<div class="org">Agencia</div>
+</div>
+</div>
+<div class="tright">Creativo</div>
+</div>
+<div class="quote">“Logramos consistencia visual y un flujo para producir variantes sin perder identidad.”</div>
+</article>
+</div>
+<div class="car-controls">
+<button aria-label="Anterior" class="pill" id="testiPrev" type="button">
+<svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
+<path d="M15 6 9 12l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button aria-label="Siguiente" class="pill" id="testiNext" type="button">
+<svg aria-hidden="true" class="icon" viewbox="0 0 24 24">
+<path d="M9 6 15 12l-6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
          CONTACTO
          ========================= -->
-    <section class="section" id="contacto">
-      <div class="container">
-        <div class="kicker reveal"><span class="dot"></span> CONTACTO</div>
-        <h2 class="h2 reveal">Agenda una consultoría o solicita una auditoría</h2>
-        <p class="p reveal">Respuesta rápida y plan de acción claro.</p>
-
-        <div class="contact" style="margin-top:18px;">
-          <div class="card reveal">
-            <div class="card-inner">
-              <h3 class="card-title">Datos directos</h3>
-              <!-- Reemplaza estos datos por los tuyos -->
-              <p class="small">Email</p>
-              <p><strong>correo@ejemplo.com</strong></p>
-
-              <p class="small" style="margin-top:10px;">LinkedIn</p>
-              <p><strong>linkedin.com/in/tuusuario</strong></p>
-
-              <p class="small" style="margin-top:10px;">Servicios</p>
-              <ul class="list">
-                <li>Consultoría estratégica IA</li>
-                <li>Auditoría y estandarización de prompts</li>
-                <li>Talleres y webinars</li>
-                <li>Automatización (Make/Zapier)</li>
-              </ul>
-
-              <div class="hr"></div>
-
-              <a class="btn primary" href="#consultoria">Ver servicios</a>
-            </div>
-          </div>
-
-          <div class="card reveal">
-            <div class="card-inner">
-              <h3 class="card-title">Formulario</h3>
-              <form id="contactForm">
-                <div class="field">
-                  <label for="nombre">Nombre</label>
-                  <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" placeholder="tu@email.com" required />
-                </div>
-                <div class="field">
-                  <label for="asunto">Asunto</label>
-                  <input id="asunto" name="asunto" type="text" placeholder="Agenda / Auditoría / Capacitación" />
-                </div>
-                <div class="field">
-                  <label for="mensaje">Mensaje</label>
-                  <textarea id="mensaje" name="mensaje" placeholder="Cuéntame tu caso, objetivos y plazos..."></textarea>
-                </div>
-
-                <button class="btn primary" type="submit">Enviar</button>
-                <p class="small" style="margin-top:10px;">
-                  Este formulario es demostrativo (sin backend). Integra un servicio como Formspree/Netlify Forms o un endpoint propio.
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- =========================
+<div class="g-anchor" id="contact"></div><section class="section" id="contacto">
+<div class="container">
+<div class="kicker reveal"><span class="dot"></span> CONTACTO</div>
+<h2 class="h2 reveal">Agenda una consultoría o solicita una auditoría</h2>
+<p class="p reveal">Respuesta rápida y plan de acción claro.</p>
+<div class="contact" style="margin-top:18px;">
+<div class="card reveal">
+<div class="card-inner">
+<h3 class="card-title">Datos directos</h3>
+<!-- Reemplaza estos datos por los tuyos -->
+<p class="small">Email</p>
+<p><strong>correo@ejemplo.com</strong></p>
+<p class="small" style="margin-top:10px;">LinkedIn</p>
+<p><strong>linkedin.com/in/tuusuario</strong></p>
+<p class="small" style="margin-top:10px;">Servicios</p>
+<ul class="list">
+<li>Consultoría estratégica IA</li>
+<li>Auditoría y estandarización de prompts</li>
+<li>Talleres y webinars</li>
+<li>Automatización (Make/Zapier)</li>
+</ul>
+<div class="hr"></div>
+<a class="btn primary" href="#consultoria">Ver servicios</a>
+</div>
+</div>
+<div class="card reveal">
+<div class="card-inner">
+<h3 class="card-title">Formulario</h3>
+<div class="card reveal" style="padding:18px;">
+  <h3 style="margin:0 0 8px;">Formulario único</h3>
+  <p class="muted" style="margin:0;">Para cotizar este servicio, usa el formulario central del HUB o escríbeme por WhatsApp.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+    <a class="g-btn g-primary" href="../../index.html#contact">Ir al formulario</a>
+    <a class="g-btn g-ghost" href="https://wa.me/56928362758?text=Hola%20Marcos,%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- =========================
        FOOTER
        ========================= -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="gap:12px;">
-          <img src="img/logo.svg" alt="Logo" />
-          <span class="title">
-            <span class="name">Nombre Apellido</span>
-            <span class="role">IA Generativa • Prompt Engineering</span>
-          </span>
-        </div>
-        <p class="small" style="margin-top:12px;">
-          Estrategia, auditoría, automatización y formación en IA generativa. Enfoque en resultados, control de riesgos y
-          entregables accionables.
-        </p>
-        <p class="small">© 2025 Nombre Apellido. Todos los derechos reservados.</p>
-      </div>
-
-      <div>
-        <h3 class="card-title">Certificaciones</h3>
-        <ul class="ul">
-          <li>IA Generativa (reemplazar)</li>
-          <li>Prompt Engineering (reemplazar)</li>
-          <li>Automatización (reemplazar)</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="card-title">Herramientas / Redes</h3>
-        <ul class="ul">
-          <li>ChatGPT • Claude • Midjourney</li>
-          <li>Stable Diffusion • DALL·E</li>
-          <li>Make • Zapier</li>
-          <li>LinkedIn • GitHub (opcional)</li>
-        </ul>
-        <p class="small" style="margin-top:12px;">
-          Aviso legal: la información entregada es educativa y consultiva; adapta políticas y cumplimiento a tu contexto.
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- =========================
+<!-- =========================
        WhatsApp flotante (obligatorio)
        - Reemplaza el número en el enlace:
-         https://wa.me/56911111111  → tu número real (sin +, sin espacios)
+         https://wa.me/56928362758  → tu número real (sin +, sin espacios)
        ========================= -->
-    <a class="whatsapp" href="https://wa.me/56911111111" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
-    <!-- Ícono (puedes reemplazar por otro SVG si lo deseas) -->
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M20.5 11.9c0 4.6-3.8 8.3-8.5 8.3-1.4 0-2.8-.3-4-.9L3.5 20.5l1.2-4.3c-.7-1.2-1.2-2.7-1.2-4.3C3.5 7.3 7.3 3.6 12 3.6s8.5 3.7 8.5 8.3Z" fill="currentColor" opacity=".22"/>
-      <path d="M12 5.4c-3.7 0-6.7 2.8-6.7 6.5 0 1.4.4 2.6 1.1 3.7l-.7 2.4 2.6-.7c1 .6 2.3 1 3.7 1 3.7 0 6.7-2.8 6.7-6.5S15.7 5.4 12 5.4Zm3.2 9.1c-.1.4-.7.8-1.2.9-.4.1-.9.1-1.5-.1-1.8-.6-3.2-2.1-4-3.5-.3-.6-.6-1.4-.2-2 .2-.4.4-.5.6-.5h.5c.1 0 .3 0 .4.3l.6 1.4c.1.2.1.3 0 .4l-.3.4c-.1.1-.1.2 0 .3.3.6 1.2 1.5 2.1 1.8.1 0 .2 0 .3-.1l.4-.5c.1-.1.2-.1.4-.1l1.3.6c.2.1.3.2.3.3 0 .1 0 .5-.1.8Z" fill="currentColor"/>
-      <path d="M3.5 20.5l2.9-.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-    </svg>
-  </a>
-
-  <script src="js/main.js"></script>
-  <script>
+<div id="siteFooter"></div><script src="../../js/site.js"></script><script src="js/main.js"></script>
+<script>
     // Sincroniza botón de tema en menú móvil (opcional)
     (function(){
       const m = document.getElementById("themeToggleMobile");

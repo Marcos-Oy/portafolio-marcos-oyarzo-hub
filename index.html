@@ -5,68 +5,30 @@
 <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>Nombre Apellido — Hub | Data, Ciberseguridad, Web, Arquitectura TI</title>
-        <meta content="Hub de servicios: Data Engineering, Ciberseguridad Ciudadana, Desarrollo Web y Arquitectura TI para PyMEs y profesionales."
+        <title>Marcos Oyarzo — Hub | Data, Ciberseguridad, Web, Arquitectura TI, IA</title>
+        <meta content="Hub profesional de Marcos Oyarzo: servicios en Data Engineering, Ciberseguridad Ciudadana, Desarrollo Web, Arquitectura TI e IA Generativa."
                 name="description" />
         <link href="img/favicon.svg" rel="icon" type="image/svg+xml" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
                 rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet">
-        </link>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/pages.css" rel="stylesheet" />
+        <script
+                data-theme-bootstrap="true">(function () { try { var t = localStorage.getItem('theme'); if (t !== 'dark' && t !== 'light') { t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; } document.documentElement.setAttribute('data-theme', t); } catch (e) { } })();</script>
 </head>
 
-<body>
+<body class="unified" data-base="./" data-page="hub">
         <a class="skip-link" href="#main">Saltar al contenido</a>
+        <div id="siteHeader"></div>
+        <div id="waFloat"></div>
         <!-- Header -->
-        <header class="site-header">
-                <div class="container header-inner">
-                        <a aria-label="Ir al inicio" class="brand" href="#top">
-                                <span aria-hidden="true" class="brand-dot"></span>
-                                <span class="brand-text">
-                                        <strong>Nombre Apellido</strong>
-                                        <small>Data • Ciberseguridad • Web • Infra TI • IA</small>
-                                </span>
-                        </a>
-                        <nav aria-label="Navegación principal" class="nav">
-                                <button aria-controls="nav-panel" aria-expanded="false" aria-label="Abrir menú"
-                                        class="nav-toggle" type="button">
-                                        <span aria-hidden="true" class="nav-icon"></span>
-                                </button>
-                                <div class="nav-panel" id="nav-panel">
-                                        <a class="nav-link" href="#about">Sobre mí</a>
-                                        <a class="nav-link" href="#services">Servicios</a>
-                                        <a class="nav-link" href="#featured">Proyectos</a>
-                                        <a class="nav-link" href="#clients">Clientes</a>
-                                        <a class="nav-link" href="#cases">Casos</a>
-                                        <a class="nav-link" href="#contact">Contacto</a>
-                                        <div class="nav-actions">
-                                                <a class="btn btn-primary" href="#contact">Agendar</a>
-                                                <button aria-label="Cambiar tema" class="btn btn-ghost theme-toggle"
-                                                        type="button">
-                                                        <span aria-hidden="true" class="theme-icon"></span>
-                                                        <span class="theme-label">Dark</span>
-                                                </button>
-                                        </div>
-                                </div>
-                        </nav>
-                </div>
-        </header>
         <!-- Floating WhatsApp -->
-        <a aria-label="WhatsApp" class="wa-float"
-                href="https://wa.me/56900000000?text=Hola%20quiero%20cotizar%20un%20servicio" rel="noopener"
-                target="_blank">
-                <svg aria-hidden="true" viewbox="0 0 24 24">
-                        <path d="M6 4h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H10l-4 4V6a2 2 0 0 1 2-2Z" fill="currentColor">
-                        </path>
-                        <path d="M8 8h8v2H8V8Zm0 4h6v2H8v-2Z" fill="currentColor" opacity=".75"></path>
-                </svg>
-        </a>
         <main id="main">
                 <!-- Hero Slider (FULL) -->
                 <section class="hero" id="top">
-                        <div aria-label="Carrusel principal" class="hero-slider">
+                        <div aria-label="Carrusel principal" class="hero-slider hero-slider--xl">
                                 <div class="hero-track" data-slider-track="">
                                         <!-- Slide 1 -->
                                         <article class="hero-slide is-active" data-slide="0">
@@ -271,7 +233,8 @@
                                                                 <p><strong>Personas</strong> (hogar/seguridad),
                                                                         <strong>PyMEs</strong> y
                                                                         <strong>equipos</strong> que inician o escalan
-                                                                        TI.</p>
+                                                                        TI.
+                                                                </p>
                                                         </div>
                                                 </div>
                                                 <div class="about-cta">
@@ -452,8 +415,8 @@
                                                         aria-hidden="true">‹</span></button>
                                         <div class="carousel-track testi-track">
                                                 <figure class="card testi">
-                                                        <img class="testi-avatar" src="img/avatars/gerencia-pyme.svg"
-                                                                alt="Gerencia PyME" loading="lazy">
+                                                        <img alt="Gerencia PyME" class="testi-avatar" loading="lazy"
+                                                                src="img/avatars/gerencia-pyme.svg" />
                                                         <div class="testi-content">
                                                                 <blockquote>“Nos ayudó a reducir costos armando PCs por
                                                                         partes y dejó la red lista en una semana.
@@ -465,8 +428,8 @@
                                                         </div>
                                                 </figure>
                                                 <figure class="card testi">
-                                                        <img class="testi-avatar" src="img/avatars/programa-social.svg"
-                                                                alt="Programa social" loading="lazy">
+                                                        <img alt="Programa social" class="testi-avatar" loading="lazy"
+                                                                src="img/avatars/programa-social.svg" />
                                                         <div class="testi-content">
                                                                 <blockquote>“El taller de ciberseguridad para adultos
                                                                         mayores fue claro, con ejemplos reales y
@@ -479,8 +442,8 @@
                                                         </div>
                                                 </figure>
                                                 <figure class="card testi">
-                                                        <img class="testi-avatar" src="img/avatars/profesional.svg"
-                                                                alt="Profesional independiente" loading="lazy">
+                                                        <img alt="Profesional independiente" class="testi-avatar"
+                                                                loading="lazy" src="img/avatars/profesional.svg" />
                                                         <div class="testi-content">
                                                                 <blockquote>“El portafolio quedó moderno y rápido.
                                                                         Además configuró WhatsApp, analytics y un
@@ -688,18 +651,20 @@
                                                         <div class="card contact-card">
                                                                 <small class="muted">Email</small>
                                                                 <a class="link-strong"
-                                                                        href="mailto:correo@ejemplo.com">correo@ejemplo.com</a>
+                                                                        href="mailto:grupo.ti@outlook.cl">grupo.ti@outlook.cl</a>
                                                         </div>
                                                         <div class="card contact-card">
                                                                 <small class="muted">LinkedIn</small>
-                                                                <a class="link-strong" href="#" rel="noopener"
-                                                                        target="_blank">linkedin.com/in/tuusuario</a>
+                                                                <a class="link-strong"
+                                                                        href="https://www.linkedin.com/in/marcos-alberto-o-766456170/"
+                                                                        rel="noopener"
+                                                                        target="_blank">linkedin.com/in/marcos-alberto-o-766456170</a>
                                                         </div>
                                                         <div class="card contact-card">
                                                                 <small class="muted">WhatsApp</small>
-                                                                <a class="link-strong" href="https://wa.me/56900000000"
-                                                                        rel="noopener" target="_blank">+56 9 0000
-                                                                        0000</a>
+                                                                <a class="link-strong" href="https://wa.me/56928362758"
+                                                                        rel="noopener" target="_blank">+56 9 2836
+                                                                        2758</a>
                                                         </div>
                                                 </div>
                                                 <div class="card contact-note">
@@ -711,73 +676,46 @@
                                                         </ul>
                                                 </div>
                                         </div>
-                                        <form class="card form" onsubmit="return false;">
+                                        <form class="card form" id="contactForm" novalidate>
                                                 <div class="form-row">
                                                         <label>
                                                                 <span>Nombre</span>
-                                                                <input autocomplete="name" placeholder="Tu nombre"
-                                                                        type="text" />
+                                                                <input name="name" autocomplete="name"
+                                                                        placeholder="Tu nombre" type="text" required />
                                                         </label>
                                                         <label>
                                                                 <span>Email</span>
-                                                                <input autocomplete="email" placeholder="tu@email.com"
-                                                                        type="email" />
+                                                                <input name="email" autocomplete="email"
+                                                                        placeholder="tu@email.com" type="email"
+                                                                        required />
                                                         </label>
                                                 </div>
+                                                <label style="display:none;">
+                                                        <span>Website</span>
+                                                        <input name="website" autocomplete="off" tabindex="-1"
+                                                                placeholder="" type="text" />
+                                                </label>
                                                 <label>
                                                         <span>Asunto</span>
-                                                        <input placeholder="Consulta / Proyecto" type="text" />
+                                                        <input name="subject" placeholder="Consulta / Proyecto"
+                                                                type="text" required />
                                                 </label>
                                                 <label>
                                                         <span>Mensaje</span>
-                                                        <textarea placeholder="Cuéntame qué necesitas..."
-                                                                rows="6"></textarea>
+                                                        <textarea name="message" placeholder="Cuéntame qué necesitas..."
+                                                                rows="6" required></textarea>
                                                 </label>
                                                 <button class="btn btn-primary" type="submit">Enviar</button>
-                                                <p class="muted tiny">Formulario demostrativo (sin backend). Puedes
-                                                        conectar Formspree, Netlify Forms o un endpoint propio.</p>
+                                                <div id="contactStatus" class="muted tiny" style="opacity:.9;"></div>
+                                                <p class="muted tiny">Este formulario envía por correo cuando el backend
+                                                        (carpeta <strong>/server</strong>) está configurado.</p>
                                         </form>
                                 </div>
                         </div>
                 </section>
         </main>
-        <footer class="site-footer">
-                <div class="container footer-grid">
-                        <div class="footer-brand">
-                                <div class="brand">
-                                        <span aria-hidden="true" class="brand-dot"></span>
-                                        <span class="brand-text">
-                                                <strong>Nombre Apellido</strong>
-                                                <small>Consultoría TI • Marca Personal</small>
-                                        </span>
-                                </div>
-                                <p class="muted">Enlaces directos a tus 5 servicios: Data Engineering, Ciberseguridad,
-                                        Desarrollo Web, Arquitectura TI e IA Generativa.</p>
-                        </div>
-                        <div>
-                                <h4>Tecnologías</h4>
-                                <ul class="footer-list">
-                                        <li>Python • SQL • Cloud</li>
-                                        <li>Seguridad • Buenas prácticas</li>
-                                        <li>HTML/CSS/JS • Performance</li>
-                                        <li>Redes • Windows • Soporte</li>
-                                </ul>
-                        </div>
-                        <div>
-                                <h4>Enlaces</h4>
-                                <ul class="footer-list">
-                                        <li><a href="#about">Sobre mí</a></li>
-                                        <li><a href="#services">Servicios</a></li>
-                                        <li><a href="#cases">Casos</a></li>
-                                        <li><a href="#contact">Contacto</a></li>
-                                </ul>
-                        </div>
-                </div>
-                <div class="container footer-bottom">
-                        <span class="muted">© 2025 Nombre Apellido. Todos los derechos reservados.</span>
-                        <a class="link" href="#top">Volver arriba</a>
-                </div>
-        </footer>
+        <div id="siteFooter"></div>
+        <script src="js/site.js"></script>
         <script src="js/main.js"></script>
 </body>
 

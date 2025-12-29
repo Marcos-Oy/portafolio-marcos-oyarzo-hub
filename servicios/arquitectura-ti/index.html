@@ -1,657 +1,505 @@
-<!doctype html>
-<html lang="es" data-theme="light">
+<!DOCTYPE html>
+
+<html data-theme="light" lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0ea5e9" />
-  <title>Arquitectura TI & Soporte — Infraestructura para Oficinas y PyMEs</title>
-  <meta name="description" content="Arquitectura TI freelance: compra y armado de PCs por volumen, instalación de redes y periféricos, licencias, seguridad básica y soporte técnico para empresas y PyMEs." />
-  <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <img src="img/logo.svg" alt="Logo" />
-        <div>
-          <strong>Arquitectura TI · Infra PyME</strong>
-          <small>Oficina lista para operar: equipos, red, licencias y soporte</small>
-        </div>
-      </a>
-
-      <nav id="siteNav" class="site-nav" aria-label="Menú principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#packs">Packs</a>
-        <a href="#proyectos">Casos</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-
-      <div class="actions">
-        <button id="themeToggle" class="btn btn--sm theme-toggle" type="button" aria-label="Cambiar tema">☾&nbsp;&nbsp;Dark</button>
-        <a class="btn btn--primary btn--sm" href="#contacto">Cotizar</a>
-        <button id="navToggle" class="nav-toggle" type="button" aria-label="Abrir menú" aria-controls="siteNav" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="inicio">
-    <!-- HERO / SLIDER XL -->
-    <section class="hero">
-      <div class="container container--hero">
-        <div id="heroSlider" class="hero-slider hero-slider--xl" aria-label="Carrusel principal">
-          <div class="slides">
-            <article class="slide">
-              <img src="img/hero-1.svg" alt="Infraestructura de oficina, PCs y red" loading="eager" />
-              <div class="slide-overlay">
-                <span class="kicker">Infraestructura TI para PyMEs</span>
-                <h1>Tu oficina operativa en días, con costos optimizados.</h1>
-                <p class="subtext">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0ea5e9" name="theme-color"/>
+<title>Arquitectura TI &amp; Soporte — Infraestructura para Oficinas y PyMEs</title>
+<meta content="Arquitectura TI freelance: compra y armado de PCs por volumen, instalación de redes y periféricos, licencias, seguridad básica y soporte técnico para empresas y PyMEs." name="description"/>
+<link href="../../img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="css/styles.css" rel="stylesheet"/><link href="../../css/pages.css" rel="stylesheet"/>
+<script data-theme-bootstrap="true">(function(){try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script></head>
+<body class="unified" data-base="../../" data-page="service"><a class="g-skip" href="#main">Saltar al contenido</a><div id="siteHeader"></div><div id="waFloat"></div>
+<main id="inicio"><div id="top"></div>
+<!-- HERO / SLIDER XL -->
+<section class="hero">
+<div class="container container--hero">
+<div aria-label="Carrusel principal" class="hero-slider hero-slider--xl" id="heroSlider">
+<div class="slides">
+<article class="slide">
+<img alt="Infraestructura de oficina, PCs y red" loading="eager" src="img/hero-1.svg"/>
+<div class="slide-overlay">
+<span class="kicker">Infraestructura TI para PyMEs</span>
+<h1>Tu oficina operativa en días, con costos optimizados.</h1>
+<p class="subtext">
                   Diagnóstico, cotización y ejecución: compra/armado de computadores por volumen, instalación de red,
                   periféricos y licencias, más soporte continuo para mantener todo funcionando.
                 </p>
-                <div class="hero-cta">
-                  <a class="btn btn--primary" href="#contacto">Pedir cotización</a>
-                  <a class="btn" href="#servicios">Ver servicios</a>
-                  <a class="btn btn--ghost" href="#packs">Ver packs</a>
-                </div>
-                <div class="hero-metrics">
-                  <div class="metric">
-                    <strong>Optimización de costos</strong>
-                    <span>mercado + compras por volumen</span>
-                  </div>
-                  <div class="metric">
-                    <strong>Implementación completa</strong>
-                    <span>hardware, software y red</span>
-                  </div>
-                  <div class="metric">
-                    <strong>Soporte y continuidad</strong>
-                    <span>presencial / remoto</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="slide">
-              <img src="img/hero-2.svg" alt="Cotización y armado por partes" loading="lazy" />
-              <div class="slide-overlay">
-                <span class="kicker">Compra Inteligente</span>
-                <h2>Cotizo, comparo y armo: PCs por torre, notebooks o mixto.</h2>
-                <p class="subtext">
+<div class="hero-cta">
+<a class="btn btn--primary" href="#contacto">Pedir cotización</a>
+<a class="btn" href="#servicios">Ver servicios</a>
+<a class="btn btn--ghost" href="#packs">Ver packs</a>
+</div>
+<div class="hero-metrics">
+<div class="metric">
+<strong>Optimización de costos</strong>
+<span>mercado + compras por volumen</span>
+</div>
+<div class="metric">
+<strong>Implementación completa</strong>
+<span>hardware, software y red</span>
+</div>
+<div class="metric">
+<strong>Soporte y continuidad</strong>
+<span>presencial / remoto</span>
+</div>
+</div>
+</div>
+</article>
+<article class="slide">
+<img alt="Cotización y armado por partes" loading="lazy" src="img/hero-2.svg"/>
+<div class="slide-overlay">
+<span class="kicker">Compra Inteligente</span>
+<h2>Cotizo, comparo y armo: PCs por torre, notebooks o mixto.</h2>
+<p class="subtext">
                   Si tu equipo trabaja 100% presencial, en muchos casos conviene torre + monitor por costo/beneficio.
                   Con red de proveedores, se puede comprar por partes y armar, incluyendo licencias por volumen.
                 </p>
-                <div class="hero-cta">
-                  <a class="btn btn--primary" href="#packs">Ver pack “Oficina Inicial”</a>
-                  <a class="btn" href="#proyectos">Ver casos</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="slide">
-              <img src="img/hero-3.svg" alt="Soporte técnico, redes y periféricos" loading="lazy" />
-              <div class="slide-overlay">
-                <span class="kicker">Soporte & Seguridad</span>
-                <h2>Servicio técnico + configuraciones y control básico de software.</h2>
-                <p class="subtext">
+<div class="hero-cta">
+<a class="btn btn--primary" href="#packs">Ver pack “Oficina Inicial”</a>
+<a class="btn" href="#proyectos">Ver casos</a>
+</div>
+</div>
+</article>
+<article class="slide">
+<img alt="Soporte técnico, redes y periféricos" loading="lazy" src="img/hero-3.svg"/>
+<div class="slide-overlay">
+<span class="kicker">Soporte &amp; Seguridad</span>
+<h2>Servicio técnico + configuraciones y control básico de software.</h2>
+<p class="subtext">
                   Reparación y optimización de notebooks/PCs, instalación de impresoras, routers y cableado. Además,
                   configuración de permisos para que instalar software requiera credenciales de administrador.
                 </p>
-                <div class="hero-cta">
-                  <a class="btn btn--primary" href="#contacto">Agendar visita</a>
-                  <a class="btn" href="#faq">Dudas frecuentes</a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <button class="slider-btn slider-btn--prev" type="button" aria-label="Anterior"><span>‹</span></button>
-          <button class="slider-btn slider-btn--next" type="button" aria-label="Siguiente"><span>›</span></button>
-          <div class="slider-dots" role="tablist" aria-label="Paginación del carrusel"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section id="servicios" class="section">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="kicker">Servicios</span>
-            <h2>Departamento TI externo para empresas que están empezando</h2>
-          </div>
-          <p>
+<div class="hero-cta">
+<a class="btn btn--primary" href="#contacto">Agendar visita</a>
+<a class="btn" href="#faq">Dudas frecuentes</a>
+</div>
+</div>
+</article>
+</div>
+<button aria-label="Anterior" class="slider-btn slider-btn--prev" type="button"><span>‹</span></button>
+<button aria-label="Siguiente" class="slider-btn slider-btn--next" type="button"><span>›</span></button>
+<div aria-label="Paginación del carrusel" class="slider-dots" role="tablist"></div>
+</div>
+</div>
+</section>
+<!-- SERVICIOS -->
+<div class="g-anchor" id="services"></div><section class="section" id="servicios">
+<div class="container">
+<div class="section-title">
+<div>
+<span class="kicker">Servicios</span>
+<h2>Departamento TI externo para empresas que están empezando</h2>
+</div>
+<p>
             Cobertura end‑to‑end: desde la compra/armado hasta la operación diaria. Puedes contratar por proyecto
             o soporte mensual.
           </p>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="card fade-up">
-            <div class="icon"><img src="img/pc.svg" alt="" aria-hidden="true"></div>
-            <h3>Compra & armado por volumen</h3>
-            <p>Estudio de mercado, cotización y armado (torres / notebooks) con estándares para la empresa.</p>
-            <ul class="list">
-              <li>Perfiles por rol (administración, ventas, diseño, etc.).</li>
-              <li>Componentes por partes para optimizar costo/beneficio.</li>
-              <li>Imaging y configuración repetible.</li>
-            </ul>
-          </article>
-
-          <article class="card fade-up">
-            <div class="icon"><img src="img/network.svg" alt="" aria-hidden="true"></div>
-            <h3>Red y conectividad de oficina</h3>
-            <p>Router/switch, Wi‑Fi estable, puntos de red y puesta en marcha para operar sin caídas.</p>
-            <ul class="list">
-              <li>Cableado estructurado básico (según alcance).</li>
-              <li>Impresoras y escáneres en red.</li>
-              <li>Documentación de credenciales y topología.</li>
-            </ul>
-          </article>
-
-          <article class="card fade-up">
-            <div class="icon"><img src="img/license.svg" alt="" aria-hidden="true"></div>
-            <h3>Licencias & software base</h3>
-            <p>Sistema operativo, ofimática y herramientas esenciales con compras por volumen cuando aplica.</p>
-            <ul class="list">
-              <li>Instalación y activación ordenada.</li>
-              <li>Inventario de licencias y asignación.</li>
-              <li>Configuración de correo corporativo.</li>
-            </ul>
-          </article>
-
-          <article class="card fade-up">
-            <div class="icon"><img src="img/tools.svg" alt="" aria-hidden="true"></div>
-            <h3>Soporte técnico (físico y digital)</h3>
-            <p>Diagnóstico y reparación de PCs/notebooks, optimización y configuración de programas.</p>
-            <ul class="list">
-              <li>Respaldo, migración y recuperación.</li>
-              <li>Drivers, rendimiento y limpieza.</li>
-              <li>Periféricos: monitores, UPS, scanners, etc.</li>
-            </ul>
-          </article>
-
-          <article class="card fade-up">
-            <div class="icon"><img src="img/printer.svg" alt="" aria-hidden="true"></div>
-            <h3>Impresoras & periféricos</h3>
-            <p>Instalación y configuración en red o USB, colas de impresión, drivers y accesos.</p>
-            <ul class="list">
-              <li>Multiusuario y políticas de uso.</li>
-              <li>Pruebas y puesta en marcha.</li>
-              <li>Soporte de fallas comunes.</li>
-            </ul>
-          </article>
-
-          <article class="card fade-up">
-            <div class="icon"><img src="img/shield.svg" alt="" aria-hidden="true"></div>
-            <h3>Seguridad básica y control</h3>
-            <p>Medidas simples que bajan el riesgo: permisos, contraseñas admin y buenas prácticas.</p>
-            <ul class="list">
-              <li>Usuario estándar + admin controlado.</li>
-              <li>Control de instalación de software.</li>
-              <li>Actualizaciones y hardening inicial.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PACKS / CATALOGO -->
-    <section id="packs" class="section">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="kicker">Packs</span>
-            <h2>Plantillas de servicio (rápidas de cotizar)</h2>
-          </div>
-          <p>Selecciona un pack y adapta el alcance. Ideal para empresas nuevas que quieren “todo listo”.</p>
-        </div>
-
-        <div class="filters" role="tablist" aria-label="Filtros de packs">
-          <button type="button" class="filter-btn is-active" data-filter="all">Todos</button>
-          <button type="button" class="filter-btn" data-filter="inicio">Inicio</button>
-          <button type="button" class="filter-btn" data-filter="red">Red</button>
-          <button type="button" class="filter-btn" data-filter="soporte">Soporte</button>
-          <button type="button" class="filter-btn" data-filter="seguridad">Seguridad</button>
-        </div>
-
-        <div class="catalog">
-          <article class="card template fade-up" data-type="inicio red seguridad">
-            <div class="thumb"><span>Pack</span></div>
-            <div class="meta">
-              <div>
-                <h3>Kit Oficina Inicial</h3>
-                <small>3–8 puestos · implementación completa</small>
-              </div>
-              <button class="btn btn--sm" type="button" data-open="startup-kit">Detalles</button>
-            </div>
-          </article>
-
-          <article class="card template fade-up" data-type="inicio seguridad">
-            <div class="thumb"><span>Pack</span></div>
-            <div class="meta">
-              <div>
-                <h3>PyME 10–25 Puestos</h3>
-                <small>estandarización + onboarding</small>
-              </div>
-              <button class="btn btn--sm" type="button" data-open="pyme-10">Detalles</button>
-            </div>
-          </article>
-
-          <article class="card template fade-up" data-type="inicio red seguridad">
-            <div class="thumb"><span>Pack</span></div>
-            <div class="meta">
-              <div>
-                <h3>Empresa 30–80 Puestos</h3>
-                <small>arquitectura escalable + procesos</small>
-              </div>
-              <button class="btn btn--sm" type="button" data-open="empresa-50">Detalles</button>
-            </div>
-          </article>
-
-          <article class="card template fade-up" data-type="soporte inicio">
-            <div class="thumb"><span>Servicio</span></div>
-            <div class="meta">
-              <div>
-                <h3>Cuidado Notebooks</h3>
-                <small>reparación y optimización</small>
-              </div>
-              <button class="btn btn--sm" type="button" data-open="notebook-care">Detalles</button>
-            </div>
-          </article>
-
-          <article class="card template fade-up" data-type="red soporte">
-            <div class="thumb"><span>Servicio</span></div>
-            <div class="meta">
-              <div>
-                <h3>Red de Oficina</h3>
-                <small>router, Wi‑Fi, puntos y pruebas</small>
-              </div>
-              <button class="btn btn--sm" type="button" data-open="red-office">Detalles</button>
-            </div>
-          </article>
-
-          <article class="card template fade-up" data-type="seguridad soporte">
-            <div class="thumb"><span>Servicio</span></div>
-            <div class="meta">
-              <div>
-                <h3>Seguridad Básica</h3>
-                <small>permisos, admin, parches</small>
-              </div>
-              <button class="btn btn--sm" type="button" data-open="security-basic">Detalles</button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE MI / ENFOQUE -->
-    <section id="sobre-mi" class="section">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="kicker">Sobre el servicio</span>
-            <h2>Arquitectura TI aplicada a la realidad de una PyME</h2>
-          </div>
-          <p>
+</div>
+<div class="grid grid-3">
+<article class="card fade-up">
+<div class="icon"><img alt="" aria-hidden="true" src="img/pc.svg"/></div>
+<h3>Compra &amp; armado por volumen</h3>
+<p>Estudio de mercado, cotización y armado (torres / notebooks) con estándares para la empresa.</p>
+<ul class="list">
+<li>Perfiles por rol (administración, ventas, diseño, etc.).</li>
+<li>Componentes por partes para optimizar costo/beneficio.</li>
+<li>Imaging y configuración repetible.</li>
+</ul>
+</article>
+<article class="card fade-up">
+<div class="icon"><img alt="" aria-hidden="true" src="img/network.svg"/></div>
+<h3>Red y conectividad de oficina</h3>
+<p>Router/switch, Wi‑Fi estable, puntos de red y puesta en marcha para operar sin caídas.</p>
+<ul class="list">
+<li>Cableado estructurado básico (según alcance).</li>
+<li>Impresoras y escáneres en red.</li>
+<li>Documentación de credenciales y topología.</li>
+</ul>
+</article>
+<article class="card fade-up">
+<div class="icon"><img alt="" aria-hidden="true" src="img/license.svg"/></div>
+<h3>Licencias &amp; software base</h3>
+<p>Sistema operativo, ofimática y herramientas esenciales con compras por volumen cuando aplica.</p>
+<ul class="list">
+<li>Instalación y activación ordenada.</li>
+<li>Inventario de licencias y asignación.</li>
+<li>Configuración de correo corporativo.</li>
+</ul>
+</article>
+<article class="card fade-up">
+<div class="icon"><img alt="" aria-hidden="true" src="img/tools.svg"/></div>
+<h3>Soporte técnico (físico y digital)</h3>
+<p>Diagnóstico y reparación de PCs/notebooks, optimización y configuración de programas.</p>
+<ul class="list">
+<li>Respaldo, migración y recuperación.</li>
+<li>Drivers, rendimiento y limpieza.</li>
+<li>Periféricos: monitores, UPS, scanners, etc.</li>
+</ul>
+</article>
+<article class="card fade-up">
+<div class="icon"><img alt="" aria-hidden="true" src="img/printer.svg"/></div>
+<h3>Impresoras &amp; periféricos</h3>
+<p>Instalación y configuración en red o USB, colas de impresión, drivers y accesos.</p>
+<ul class="list">
+<li>Multiusuario y políticas de uso.</li>
+<li>Pruebas y puesta en marcha.</li>
+<li>Soporte de fallas comunes.</li>
+</ul>
+</article>
+<article class="card fade-up">
+<div class="icon"><img alt="" aria-hidden="true" src="img/shield.svg"/></div>
+<h3>Seguridad básica y control</h3>
+<p>Medidas simples que bajan el riesgo: permisos, contraseñas admin y buenas prácticas.</p>
+<ul class="list">
+<li>Usuario estándar + admin controlado.</li>
+<li>Control de instalación de software.</li>
+<li>Actualizaciones y hardening inicial.</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<!-- PACKS / CATALOGO -->
+<section class="section" id="packs">
+<div class="container">
+<div class="section-title">
+<div>
+<span class="kicker">Packs</span>
+<h2>Plantillas de servicio (rápidas de cotizar)</h2>
+</div>
+<p>Selecciona un pack y adapta el alcance. Ideal para empresas nuevas que quieren “todo listo”.</p>
+</div>
+<div aria-label="Filtros de packs" class="filters" role="tablist">
+<button class="filter-btn is-active" data-filter="all" type="button">Todos</button>
+<button class="filter-btn" data-filter="inicio" type="button">Inicio</button>
+<button class="filter-btn" data-filter="red" type="button">Red</button>
+<button class="filter-btn" data-filter="soporte" type="button">Soporte</button>
+<button class="filter-btn" data-filter="seguridad" type="button">Seguridad</button>
+</div>
+<div class="catalog">
+<article class="card template fade-up" data-type="inicio red seguridad">
+<div class="thumb"><span>Pack</span></div>
+<div class="meta">
+<div>
+<h3>Kit Oficina Inicial</h3>
+<small>3–8 puestos · implementación completa</small>
+</div>
+<button class="btn btn--sm" data-open="startup-kit" type="button">Detalles</button>
+</div>
+</article>
+<article class="card template fade-up" data-type="inicio seguridad">
+<div class="thumb"><span>Pack</span></div>
+<div class="meta">
+<div>
+<h3>PyME 10–25 Puestos</h3>
+<small>estandarización + onboarding</small>
+</div>
+<button class="btn btn--sm" data-open="pyme-10" type="button">Detalles</button>
+</div>
+</article>
+<article class="card template fade-up" data-type="inicio red seguridad">
+<div class="thumb"><span>Pack</span></div>
+<div class="meta">
+<div>
+<h3>Empresa 30–80 Puestos</h3>
+<small>arquitectura escalable + procesos</small>
+</div>
+<button class="btn btn--sm" data-open="empresa-50" type="button">Detalles</button>
+</div>
+</article>
+<article class="card template fade-up" data-type="soporte inicio">
+<div class="thumb"><span>Servicio</span></div>
+<div class="meta">
+<div>
+<h3>Cuidado Notebooks</h3>
+<small>reparación y optimización</small>
+</div>
+<button class="btn btn--sm" data-open="notebook-care" type="button">Detalles</button>
+</div>
+</article>
+<article class="card template fade-up" data-type="red soporte">
+<div class="thumb"><span>Servicio</span></div>
+<div class="meta">
+<div>
+<h3>Red de Oficina</h3>
+<small>router, Wi‑Fi, puntos y pruebas</small>
+</div>
+<button class="btn btn--sm" data-open="red-office" type="button">Detalles</button>
+</div>
+</article>
+<article class="card template fade-up" data-type="seguridad soporte">
+<div class="thumb"><span>Servicio</span></div>
+<div class="meta">
+<div>
+<h3>Seguridad Básica</h3>
+<small>permisos, admin, parches</small>
+</div>
+<button class="btn btn--sm" data-open="security-basic" type="button">Detalles</button>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- SOBRE MI / ENFOQUE -->
+<section class="section" id="sobre-mi">
+<div class="container">
+<div class="section-title">
+<div>
+<span class="kicker">Sobre el servicio</span>
+<h2>Arquitectura TI aplicada a la realidad de una PyME</h2>
+</div>
+<p>
             La meta es simple: que la empresa opere con tecnología estable, documentada y con control básico de seguridad,
             sin sobregastar.
           </p>
-        </div>
-
-        <div class="about-grid">
-          <article class="card about-card fade-up">
-            <h3>Cómo trabajo</h3>
-            <p>
+</div>
+<div class="about-grid">
+<article class="card about-card fade-up">
+<h3>Cómo trabajo</h3>
+<p>
               Combino diagnóstico (requerimientos por rol), estandarización (mismo setup para reducir soporte) y ejecución.
               Puedo operar como “TI externo” o apoyar a tu equipo interno.
             </p>
-            <ul class="list">
-              <li><strong>Cotización transparente:</strong> alternativa A/B/C con pros/cons y rangos de costo.</li>
-              <li><strong>Compras eficientes:</strong> por volumen, por partes, o recomendación de proveedor.</li>
-              <li><strong>Implementación:</strong> instalación física, software y pruebas con checklist.</li>
-              <li><strong>Operación:</strong> soporte, inventario, guías para usuarios y documentación.</li>
-            </ul>
-
-            <div class="chips" aria-label="Capacidades">
-              <span class="chip">Armado PCs</span>
-              <span class="chip">Redes</span>
-              <span class="chip">Licenciamiento</span>
-              <span class="chip">Soporte</span>
-              <span class="chip">Seguridad básica</span>
-              <span class="chip">Documentación</span>
-            </div>
-          </article>
-
-          <article class="card about-card fade-up">
-            <div class="profile-wrap">
-              <div class="profile-photo">
-                <img src="img/profile.svg" alt="Foto de perfil (placeholder)" loading="lazy" />
-                <div class="profile-badge"><i></i><strong>Disponibilidad por agenda</strong></div>
-              </div>
-
-              <div class="profile-stats">
-                <div class="stat">
-                  <strong>Entrega típica</strong>
-                  <span>diagnóstico → ejecución</span>
-                </div>
-                <div class="stat">
-                  <strong>Modalidad</strong>
-                  <span>presencial / remoto</span>
-                </div>
-                <div class="stat">
-                  <strong>Enfoque</strong>
-                  <span>operación + control</span>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASOS / PROYECTOS -->
-    <section id="proyectos" class="section">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="kicker">Casos</span>
-            <h2>Ejemplos de implementación (editables)</h2>
-          </div>
-          <p>Estos casos son plantillas. Cambia el texto por proyectos reales y agrega fotos cuando los tengas.</p>
-        </div>
-
-        <div class="project-wrap">
-          <div class="project-list">
-            <div class="project-item fade-up is-active"
-              data-title="Oficina nueva: 6 puestos presenciales"
-              data-desc="Evaluación de perfiles, cotización torre+monitor, compra por volumen, armado, instalación de red Wi‑Fi y configuración de correos."
-              data-tags="Cotización|Armado|Red|Correo|Documentación">
-              <strong>6 puestos presenciales</strong>
-              <small>torres + monitores + red + correo</small>
-            </div>
-
-            <div class="project-item fade-up"
-              data-title="Renovación: notebooks lentos"
-              data-desc="Diagnóstico y mejora: migración a SSD, ampliación RAM (según equipo), reinstalación, drivers y limpieza, con respaldo."
-              data-tags="Soporte|SSD/RAM|Respaldo|Rendimiento">
-              <strong>Notebooks lentos</strong>
-              <small>optimización y recuperación</small>
-            </div>
-
-            <div class="project-item fade-up"
-              data-title="Red e impresoras para 18 usuarios"
-              data-desc="Instalación de router/switch, orden de cableado, impresión en red y documentación de accesos para administración."
-              data-tags="Red|Impresoras|Wi‑Fi|Documentación">
-              <strong>Red + impresoras</strong>
-              <small>operación estable por áreas</small>
-            </div>
-
-            <div class="project-item fade-up"
-              data-title="Control básico de software"
-              data-desc="Configuración de usuario estándar, credenciales admin para instalaciones, actualización y guía de buenas prácticas para el equipo."
-              data-tags="Seguridad|Permisos|Buenas prácticas|Parches">
-              <strong>Control de software</strong>
-              <small>admin, permisos y políticas</small>
-            </div>
-          </div>
-
-          <article class="project-card fade-up" aria-label="Detalle del caso seleccionado">
-            <div class="top">
-              <h3 id="projTitle">Oficina nueva: 6 puestos presenciales</h3>
-              <p id="projDesc">
+<ul class="list">
+<li><strong>Cotización transparente:</strong> alternativa A/B/C con pros/cons y rangos de costo.</li>
+<li><strong>Compras eficientes:</strong> por volumen, por partes, o recomendación de proveedor.</li>
+<li><strong>Implementación:</strong> instalación física, software y pruebas con checklist.</li>
+<li><strong>Operación:</strong> soporte, inventario, guías para usuarios y documentación.</li>
+</ul>
+<div aria-label="Capacidades" class="chips">
+<span class="chip">Armado PCs</span>
+<span class="chip">Redes</span>
+<span class="chip">Licenciamiento</span>
+<span class="chip">Soporte</span>
+<span class="chip">Seguridad básica</span>
+<span class="chip">Documentación</span>
+</div>
+</article>
+<article class="card about-card fade-up">
+<div class="profile-wrap">
+<div class="profile-photo">
+<img alt="Foto de perfil (placeholder)" loading="lazy" src="img/hero-1.svg"/>
+<div class="profile-badge"><i></i><strong>Disponibilidad por agenda</strong></div>
+</div>
+<div class="profile-stats">
+<div class="stat">
+<strong>Entrega típica</strong>
+<span>diagnóstico → ejecución</span>
+</div>
+<div class="stat">
+<strong>Modalidad</strong>
+<span>presencial / remoto</span>
+</div>
+<div class="stat">
+<strong>Enfoque</strong>
+<span>operación + control</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- CASOS / PROYECTOS -->
+<div class="g-anchor" id="projects"></div><section class="section" id="proyectos">
+<div class="container">
+<div class="section-title">
+<div>
+<span class="kicker">Casos</span>
+<h2>Ejemplos de implementación (editables)</h2>
+</div>
+<p>Estos casos son plantillas. Cambia el texto por proyectos reales y agrega fotos cuando los tengas.</p>
+</div>
+<div class="project-wrap">
+<div class="project-list">
+<div class="project-item fade-up is-active" data-desc="Evaluación de perfiles, cotización torre+monitor, compra por volumen, armado, instalación de red Wi‑Fi y configuración de correos." data-tags="Cotización|Armado|Red|Correo|Documentación" data-title="Oficina nueva: 6 puestos presenciales">
+<strong>6 puestos presenciales</strong>
+<small>torres + monitores + red + correo</small>
+</div>
+<div class="project-item fade-up" data-desc="Diagnóstico y mejora: migración a SSD, ampliación RAM (según equipo), reinstalación, drivers y limpieza, con respaldo." data-tags="Soporte|SSD/RAM|Respaldo|Rendimiento" data-title="Renovación: notebooks lentos">
+<strong>Notebooks lentos</strong>
+<small>optimización y recuperación</small>
+</div>
+<div class="project-item fade-up" data-desc="Instalación de router/switch, orden de cableado, impresión en red y documentación de accesos para administración." data-tags="Red|Impresoras|Wi‑Fi|Documentación" data-title="Red e impresoras para 18 usuarios">
+<strong>Red + impresoras</strong>
+<small>operación estable por áreas</small>
+</div>
+<div class="project-item fade-up" data-desc="Configuración de usuario estándar, credenciales admin para instalaciones, actualización y guía de buenas prácticas para el equipo." data-tags="Seguridad|Permisos|Buenas prácticas|Parches" data-title="Control básico de software">
+<strong>Control de software</strong>
+<small>admin, permisos y políticas</small>
+</div>
+</div>
+<article aria-label="Detalle del caso seleccionado" class="project-card fade-up">
+<div class="top">
+<h3 id="projTitle">Oficina nueva: 6 puestos presenciales</h3>
+<p id="projDesc">
                 Evaluación de perfiles, cotización torre+monitor, compra por volumen, armado, instalación de red Wi‑Fi y configuración de correos.
               </p>
-              <div class="tags" id="projTags"></div>
-            </div>
-            <div class="bottom">
-              <div class="project-pager">
-                <button class="btn btn--sm" id="projPrev" type="button" aria-label="Caso anterior">←</button>
-                <span id="projPager">1 / 4</span>
-                <button class="btn btn--sm" id="projNext" type="button" aria-label="Caso siguiente">→</button>
-              </div>
-              <a class="btn btn--primary btn--sm" href="#contacto">Cotizar algo similar</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLIENTES / TESTIMONIOS -->
-    <section id="confianza" class="section">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="kicker">Confianza</span>
-            <h2>Para quién es este servicio</h2>
-          </div>
-          <p>Si tu empresa necesita operar con TI “como si tuviera departamento interno”, esto calza perfecto.</p>
-        </div>
-
-        <div class="grid grid-2">
-          <article class="card fade-up">
-            <h3>Tipos de clientes</h3>
-            <div class="clients" aria-label="Tipos de clientes">
-              <span class="client-pill">PyMEs en crecimiento</span>
-              <span class="client-pill">Oficinas nuevas</span>
-              <span class="client-pill">Empresas sin TI interno</span>
-              <span class="client-pill">Equipos híbridos/presenciales</span>
-              <span class="client-pill">Administración & ventas</span>
-              <span class="client-pill">Operación en terreno</span>
-            </div>
-          </article>
-
-          <article class="card fade-up quote">
-            <h3>Qué se obtiene</h3>
-            <p>
+<div class="tags" id="projTags"></div>
+</div>
+<div class="bottom">
+<div class="project-pager">
+<button aria-label="Caso anterior" class="btn btn--sm" id="projPrev" type="button">←</button>
+<span id="projPager">1 / 4</span>
+<button aria-label="Caso siguiente" class="btn btn--sm" id="projNext" type="button">→</button>
+</div>
+<a class="btn btn--primary btn--sm" href="#contacto">Cotizar algo similar</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- CLIENTES / TESTIMONIOS -->
+<section class="section" id="confianza">
+<div class="container">
+<div class="section-title">
+<div>
+<span class="kicker">Confianza</span>
+<h2>Para quién es este servicio</h2>
+</div>
+<p>Si tu empresa necesita operar con TI “como si tuviera departamento interno”, esto calza perfecto.</p>
+</div>
+<div class="grid grid-2">
+<article class="card fade-up">
+<h3>Tipos de clientes</h3>
+<div aria-label="Tipos de clientes" class="clients">
+<span class="client-pill">PyMEs en crecimiento</span>
+<span class="client-pill">Oficinas nuevas</span>
+<span class="client-pill">Empresas sin TI interno</span>
+<span class="client-pill">Equipos híbridos/presenciales</span>
+<span class="client-pill">Administración &amp; ventas</span>
+<span class="client-pill">Operación en terreno</span>
+</div>
+</article>
+<article class="card fade-up quote">
+<h3>Qué se obtiene</h3>
+<p>
               “Estandarización, documentación y control. Menos tiempo perdido por fallas, y una base técnica clara
               para crecer: más puestos, más herramientas y mejores prácticas.”
             </p>
-            <div class="who">— Enfoque de trabajo (reemplazar por testimonio real)</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="kicker">FAQ</span>
-            <h2>Dudas frecuentes</h2>
-          </div>
-          <p>Respuestas rápidas para acelerar cotizaciones y la implementación.</p>
-        </div>
-
-        <div class="faq">
-          <details class="fade-up">
-            <summary>¿Cuándo conviene torre vs notebook?</summary>
-            <p>
+<div class="who">— Enfoque de trabajo (reemplazar por testimonio real)</div>
+</article>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="section" id="faq">
+<div class="container">
+<div class="section-title">
+<div>
+<span class="kicker">FAQ</span>
+<h2>Dudas frecuentes</h2>
+</div>
+<p>Respuestas rápidas para acelerar cotizaciones y la implementación.</p>
+</div>
+<div class="faq">
+<details class="fade-up">
+<summary>¿Cuándo conviene torre vs notebook?</summary>
+<p>
               Si el equipo trabaja 100% presencial, normalmente la torre ofrece mejor costo/rendimiento y vida útil.
               Si hay movilidad o trabajo híbrido, notebook. También se puede proponer un esquema mixto por rol.
             </p>
-          </details>
-
-          <details class="fade-up">
-            <summary>¿Puedes comprar por partes y armar?</summary>
-            <p>
+</details>
+<details class="fade-up">
+<summary>¿Puedes comprar por partes y armar?</summary>
+<p>
               Sí. Se define un estándar por rol, se cotiza por componentes y se arma con pruebas. Esto suele reducir
               costos y simplifica el soporte (misma base para todos).
             </p>
-          </details>
-
-          <details class="fade-up">
-            <summary>¿Incluye licencias y ofimática?</summary>
-            <p>
+</details>
+<details class="fade-up">
+<summary>¿Incluye licencias y ofimática?</summary>
+<p>
               Se puede incluir: sistema operativo, suite ofimática, antivirus y herramientas de productividad. La propuesta
               depende del tamaño (volumen), compliance y necesidades.
             </p>
-          </details>
-
-          <details class="fade-up">
-            <summary>¿Cómo funciona el control de software “con clave admin”?</summary>
-            <p>
+</details>
+<details class="fade-up">
+<summary>¿Cómo funciona el control de software “con clave admin”?</summary>
+<p>
               Se configura a los usuarios como estándar (sin privilegios) y se mantiene una cuenta de administrador
               controlada. Así, cualquier instalación requiere credenciales autorizadas.
             </p>
-          </details>
-
-          <details class="fade-up">
-            <summary>¿Haces soporte mensual?</summary>
-            <p>
+</details>
+<details class="fade-up">
+<summary>¿Haces soporte mensual?</summary>
+<p>
               Sí. Se puede pactar una bolsa de horas o soporte por incidencia, combinando remoto y visitas presenciales.
               Ideal para empresas sin TI interno.
             </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="section">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="kicker">Contacto</span>
-            <h2>Cuéntame tu caso y te propongo una solución</h2>
-          </div>
-          <p>
+</details>
+</div>
+</div>
+</section>
+<!-- CONTACTO -->
+<div class="g-anchor" id="contact"></div><section class="section" id="contacto">
+<div class="container">
+<div class="section-title">
+<div>
+<span class="kicker">Contacto</span>
+<h2>Cuéntame tu caso y te propongo una solución</h2>
+</div>
+<p>
             Respuesta rápida con alternativas y próximos pasos. Puedes solicitar visita técnica o cotización remota.
           </p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-cards">
-            <div class="contact-card fade-up">
-              <strong>WhatsApp</strong>
-              <a href="https://wa.me/56900000000" target="_blank" rel="noreferrer">+56 9 0000 0000</a>
-              <div class="helper">Reemplaza el número en el enlace <code>wa.me</code>.</div>
-            </div>
-
-            <div class="contact-card fade-up">
-              <strong>Email</strong>
-              <a href="mailto:contacto@tu-dominio.cl">contacto@tu-dominio.cl</a>
-              <div class="helper">Cambia por tu correo real y/o dominio.</div>
-            </div>
-
-            <div class="contact-card fade-up">
-              <strong>Ubicación</strong>
-              <span style="color:var(--muted); font-weight:800;">Santiago, Chile (o tu ciudad)</span>
-              <div class="helper">Atención presencial y remoto según agenda.</div>
-            </div>
-
-            <div class="contact-card fade-up">
-              <strong>Horario</strong>
-              <span style="color:var(--muted); font-weight:800;">Lun–Sáb · 09:00–19:00</span>
-              <div class="helper">Ajusta a tu disponibilidad real.</div>
-            </div>
-          </div>
-
-          <form id="contactForm" class="fade-up" aria-label="Formulario de contacto">
-            <div class="field">
-              <label for="name">Nombre</label>
-              <input id="name" name="name" type="text" placeholder="Tu nombre" required />
-            </div>
-
-            <div class="field">
-              <label for="company">Empresa (opcional)</label>
-              <input id="company" name="company" type="text" placeholder="Nombre de tu empresa" />
-            </div>
-
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="nombre@correo.com" required />
-            </div>
-
-            <div class="field">
-              <label for="message">¿Qué necesitas?</label>
-              <textarea id="message" name="message" placeholder="Ej: 12 computadores + impresora + red Wi‑Fi. Presencial, Santiago. Busco optimizar costos." required></textarea>
-            </div>
-
-            <button class="btn btn--primary" type="submit">Enviar</button>
-
-            <p class="helper">
-              Nota: el formulario es demo. Conecta a Formspree, Netlify Forms o tu backend.
-              También puedes reemplazarlo por un botón directo a WhatsApp.
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Modal Packs -->
-  <div id="templateModal" class="modal" aria-hidden="true" aria-label="Detalle del pack">
-    <div class="modal-panel" role="dialog" aria-modal="true">
-      <div class="modal-head">
-        <strong id="modalTitle">Título</strong>
-        <button id="modalClose" class="btn btn--sm" type="button" aria-label="Cerrar">Cerrar</button>
-      </div>
-      <div class="modal-body">
-        <div id="modalPreview" class="modal-preview"><span>Vista previa</span></div>
-        <div class="modal-info">
-          <p id="modalDesc"></p>
-          <ul id="modalList" class="list"></ul>
-          <a class="btn btn--primary" href="#contacto">Cotizar este pack</a>
-        </div>
-      </div>
-    </div>
+</div>
+<div class="contact-grid">
+<div class="contact-cards">
+<div class="contact-card fade-up">
+<strong>WhatsApp</strong>
+<a href="https://wa.me/56928362758" rel="noreferrer" target="_blank">+56 9 2836 2758</a>
+<div class="helper">Reemplaza el número en el enlace <code>wa.me</code>.</div>
+</div>
+<div class="contact-card fade-up">
+<strong>Email</strong>
+<a href="mailto:contacto@tu-dominio.cl">contacto@tu-dominio.cl</a>
+<div class="helper">Cambia por tu correo real y/o dominio.</div>
+</div>
+<div class="contact-card fade-up">
+<strong>Ubicación</strong>
+<span style="color:var(--muted); font-weight:800;">Santiago, Chile (o tu ciudad)</span>
+<div class="helper">Atención presencial y remoto según agenda.</div>
+</div>
+<div class="contact-card fade-up">
+<strong>Horario</strong>
+<span style="color:var(--muted); font-weight:800;">Lun–Sáb · 09:00–19:00</span>
+<div class="helper">Ajusta a tu disponibilidad real.</div>
+</div>
+</div>
+<div class="card reveal" style="padding:18px;">
+  <h3 style="margin:0 0 8px;">Formulario único</h3>
+  <p class="muted" style="margin:0;">Para cotizar este servicio, usa el formulario central del HUB o escríbeme por WhatsApp.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+    <a class="g-btn g-primary" href="../../index.html#contact">Ir al formulario</a>
+    <a class="g-btn g-ghost" href="https://wa.me/56928362758?text=Hola%20Marcos,%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener">WhatsApp</a>
   </div>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Arquitectura TI · Infra PyME</h4>
-          <p style="margin:0; color:var(--muted); line-height:1.55;">
-            Infraestructura informática para empresas: equipos, red, licencias, seguridad básica y soporte.
-            Reemplaza textos, agrega fotos reales y ajusta tus datos de contacto.
-          </p>
-        </div>
-
-        <div>
-          <h4>Secciones</h4>
-          <ul>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#packs">Packs</a></li>
-            <li><a href="#proyectos">Casos</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#" onclick="alert('Agrega aquí tu aviso de privacidad.'); return false;">Privacidad</a></li>
-            <li><a href="#" onclick="alert('Agrega aquí tus términos y condiciones.'); return false;">Términos</a></li>
-            <li><a href="#" onclick="alert('Agrega aquí tus datos de empresa / SII si corresponde.'); return false;">Datos</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> · Arquitectura TI freelance</span>
-        <a class="back-top" href="#inicio">Volver arriba</a>
-      </div>
-    </div>
-  </footer>
-
-  <a class="whatsapp" href="https://wa.me/56900000000" target="_blank" rel="noreferrer" aria-label="Escribir por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
-      <path fill="currentColor" d="M19.11 17.2c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.42-1.34-1.66-.14-.24-.02-.38.1-.5.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.7 2.6 4.12 3.64.58.25 1.04.4 1.4.52.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/>
-      <path fill="currentColor" d="M16 3C9.38 3 4 8.38 4 15c0 2.12.56 4.18 1.62 5.98L4 29l8.24-1.58C13.98 27.78 14.98 28 16 28c6.62 0 12-5.38 12-12S22.62 3 16 3zm0 22.5c-.9 0-1.78-.2-2.58-.5l-.18-.07-4.9.94.94-4.78-.08-.2C8.86 19.16 8.5 17.1 8.5 15 8.5 10.86 11.86 7.5 16 7.5S23.5 10.86 23.5 15 20.14 22.5 16 22.5z"/>
-    </svg>
-  </a>
-
-  <script>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Modal Packs -->
+<div aria-hidden="true" aria-label="Detalle del pack" class="modal" id="templateModal">
+<div aria-modal="true" class="modal-panel" role="dialog">
+<div class="modal-head">
+<strong id="modalTitle">Título</strong>
+<button aria-label="Cerrar" class="btn btn--sm" id="modalClose" type="button">Cerrar</button>
+</div>
+<div class="modal-body">
+<div class="modal-preview" id="modalPreview"><span>Vista previa</span></div>
+<div class="modal-info">
+<p id="modalDesc"></p>
+<ul class="list" id="modalList"></ul>
+<a class="btn btn--primary" href="#contacto">Cotizar este pack</a>
+</div>
+</div>
+</div>
+</div>
+<div id="siteFooter"></div><script src="../../js/site.js"></script><script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script src="js/main.js" defer></script>
+<script defer="" src="js/main.js"></script>
 </body>
 </html>

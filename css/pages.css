@@ -1,0 +1,329 @@
+/* =====================================================================
+   Global UI (Header / Footer / WhatsApp) — Marcos Oyarzo Hub
+   - Namespaced with .g-* to avoid collisions with service-specific CSS
+   - Works with html[data-theme="dark|light"]
+   ===================================================================== */
+
+:root{
+  --g-container: 1120px;
+  --g-radius: 16px;
+  --g-shadow: 0 14px 38px rgba(0,0,0,.22);
+  --g-border-dark: rgba(255,255,255,.10);
+  --g-border-light: rgba(15,23,42,.14);
+  --g-text-dark: rgba(255,255,255,.92);
+  --g-text-light: rgba(15,23,42,.92);
+  --g-muted-dark: rgba(255,255,255,.70);
+  --g-muted-light: rgba(15,23,42,.70);
+  --g-surface-dark: rgba(11,16,32,.78);
+  --g-surface-light: rgba(255,255,255,.78);
+  --g-accent: #14b8ff;
+  --g-accent2: #a855f7;
+  --g-wa: #22c55e;
+}
+
+html{ scroll-behavior: smooth; }
+
+body.unified{ overflow-x: hidden; }
+
+.g-skip{
+  position:absolute;
+  left:-999px;
+  top:12px;
+  padding:10px 12px;
+  border-radius: 12px;
+  z-index: 9999;
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+}
+.g-skip:focus{ left:12px; }
+
+.g-container{
+  max-width: var(--g-container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.g-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+html[data-theme="dark"] .g-header{ background: var(--g-surface-dark); border-bottom: 1px solid var(--g-border-dark); color: var(--g-text-dark); }
+html[data-theme="light"] .g-header{ background: var(--g-surface-light); border-bottom: 1px solid var(--g-border-light); color: var(--g-text-light); }
+
+.g-header-inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.g-brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  text-decoration:none;
+  color: inherit;
+  min-width: 220px;
+}
+
+.g-brand-dot{
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: var(--g-accent);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--g-accent) 18%, transparent);
+}
+
+.g-brand-text strong{ display:block; font-weight: 800; letter-spacing: -.02em; }
+.g-brand-text small{ display:block; font-size: 12px; opacity: .82; margin-top: 2px; }
+
+.g-nav{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.g-nav-toggle{
+  display:none;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.g-nav-icon{
+  display:block;
+  width: 18px;
+  height: 12px;
+  position: relative;
+}
+.g-nav-icon::before,.g-nav-icon::after,.g-nav-icon span{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: .9;
+}
+.g-nav-icon::before{ top:0; }
+.g-nav-icon span{ top:5px; }
+.g-nav-icon::after{ bottom:0; }
+
+.g-nav-panel{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.g-link{
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 10px;
+  border-radius: 12px;
+  opacity: .92;
+  font-weight: 600;
+  font-size: 14px;
+}
+.g-link:hover{ opacity: 1; }
+
+.g-btn{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  border-radius: 14px;
+  padding: 10px 12px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  color: inherit;
+  background: transparent;
+}
+
+html[data-theme="dark"] .g-btn.g-primary{ background: linear-gradient(135deg, var(--g-accent), color-mix(in oklab, var(--g-accent2) 35%, var(--g-accent))); color: #06121a; }
+html[data-theme="light"] .g-btn.g-primary{ background: linear-gradient(135deg, var(--g-accent), color-mix(in oklab, var(--g-accent2) 35%, var(--g-accent))); color: #06121a; }
+
+html[data-theme="dark"] .g-btn.g-ghost{ border-color: var(--g-border-dark); background: rgba(255,255,255,.04); }
+html[data-theme="light"] .g-btn.g-ghost{ border-color: var(--g-border-light); background: rgba(15,23,42,.03); }
+
+.g-theme-label{ font-weight: 800; }
+
+.g-dropdown{
+  position: relative;
+}
+.g-dropdown summary{
+  list-style:none;
+}
+.g-dropdown summary::-webkit-details-marker{ display:none; }
+.g-dropdown summary{
+  cursor:pointer;
+}
+.g-dropdown[open] summary{ opacity: 1; }
+
+.g-dropdown-menu{
+  position:absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 270px;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: var(--g-shadow);
+}
+html[data-theme="dark"] .g-dropdown-menu{ background: rgba(2,6,23,.96); border: 1px solid var(--g-border-dark); }
+html[data-theme="light"] .g-dropdown-menu{ background: rgba(255,255,255,.98); border: 1px solid var(--g-border-light); }
+
+.g-dropdown-menu a{
+  display:flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration:none;
+  color: inherit;
+}
+html[data-theme="dark"] .g-dropdown-menu a:hover{ background: rgba(255,255,255,.06); }
+html[data-theme="light"] .g-dropdown-menu a:hover{ background: rgba(15,23,42,.04); }
+.g-dropdown-menu a span{ font-size: 12px; opacity: .75; font-weight: 600; }
+
+/* Mobile */
+@media (max-width: 860px){
+  .g-nav-toggle{ display:inline-flex; align-items:center; justify-content:center; }
+  .g-nav-panel{
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    top: 64px;
+    display:none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+  html[data-theme="dark"] .g-nav-panel{ background: rgba(2,6,23,.96); border: 1px solid var(--g-border-dark); }
+  html[data-theme="light"] .g-nav-panel{ background: rgba(255,255,255,.98); border: 1px solid var(--g-border-light); }
+
+  .g-nav-panel.is-open{ display:flex; }
+  .g-link{ padding: 12px 12px; }
+  .g-dropdown-menu{ position: static; box-shadow: none; margin-top: 8px; }
+}
+
+/* WhatsApp float */
+.g-wa-float{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 999;
+  text-decoration:none;
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+  transition: transform .15s ease;
+}
+.g-wa-float:hover{ transform: translateY(-2px) scale(1.03); }
+.g-wa-float .g-wa-icon{
+  width: 44px;
+  height: 44px;
+  display:block;
+}
+
+
+
+/* Footer */
+.g-footer{
+  margin-top: 36px;
+}
+html[data-theme="dark"] .g-footer{ background: rgba(2,6,23,.70); border-top: 1px solid var(--g-border-dark); color: var(--g-text-dark); }
+html[data-theme="light"] .g-footer{ background: rgba(248,250,252,.82); border-top: 1px solid var(--g-border-light); color: var(--g-text-light); }
+
+.g-footer-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 22px;
+  padding: 28px 0;
+}
+
+.g-footer h4{
+  margin: 0 0 10px;
+  font-size: 14px;
+  letter-spacing: -.01em;
+}
+
+.g-muted{ opacity: .75; }
+
+.g-footer-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap: 8px;
+}
+
+.g-footer-list a{ color: inherit; text-decoration:none; opacity: .9; }
+.g-footer-list a:hover{ opacity: 1; text-decoration: underline; }
+
+.g-footer-bottom{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 12px;
+  padding: 14px 0 22px;
+  font-size: 13px;
+  opacity: .88;
+}
+
+@media (max-width: 860px){
+  .g-footer-grid{ grid-template-columns: 1fr; }
+  .g-footer-bottom{ flex-direction: column; align-items: flex-start; }
+}
+
+
+/* Anchor offsets for sticky header */
+:where(section, .g-anchor){ scroll-margin-top: 90px; }
+.g-anchor{ display:block; height:0; }
+
+
+/* =====================================================================
+   Hero slider normalization (FULL)
+   - Forces HUB and services to use full-width slider (no card framing)
+   ===================================================================== */
+
+.unified .hero{
+  padding: 0 !important;
+}
+
+.unified .hero-slider{
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.unified .hero-slider .hero-track,
+.unified .hero-slider .slides{
+  height: clamp(560px, calc(100vh - 82px), 760px) !important;
+}
+

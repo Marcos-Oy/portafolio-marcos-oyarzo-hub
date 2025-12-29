@@ -1,637 +1,500 @@
-<!doctype html>
-<html lang="es" data-theme="light">
+<!DOCTYPE html>
+
+<html data-theme="light" lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0B1020" />
-  <meta name="description" content="Seminarios y asesorías en ciberseguridad ciudadana: prevención de estafas, malware, ingeniería social, IA, protección infantil y capacitación para PyMEs." />
-  <title>CyberCívica — Ciberseguridad Ciudadana</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Inicio">
-        <img src="img/logo.svg" alt="Logo CyberCívica" />
-        <span>CyberCívica</span>
-      </a>
-
-      <nav class="site-nav" id="siteNav" aria-label="Menú principal">
-        <a href="#audiences">Enfoque</a>
-        <a href="#program">Programa</a>
-        <a href="#templates">Seminarios</a>
-        <a href="#projects">Impacto</a>
-        <a href="#testimonials">Testimonios</a>
-        <a href="#contact" class="nav-cta btn btn--solid">Agendar</a>
-
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false" title="Cambiar tema">
-          <span class="theme-icon" aria-hidden="true"></span>
-          <span class="theme-text">Tema</span>
-        </button>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO Slider -->
-  <section class="hero" id="top">
-    <div class="hero-slider" aria-label="Carrusel de ciberseguridad ciudadana">
-      <div class="slides" id="heroSlides">
-        <article class="slide is-active">
-          <img src="img/hero-1.svg" alt="Protección digital para la vida real (imagen genérica)">
-          <div class="slide-overlay">
-            <div class="overlay-inner">
-              <p class="kicker">Ciberseguridad Ciudadana</p>
-              <h1>Orientación práctica para protegerte de estafas, malware e ingeniería social</h1>
-              <p class="subtext">Seminarios y asesorías para personas naturales, adultos mayores, protección infantil y equipos PyME. Contenido claro, con ejemplos y actividades seguras.</p>
-              <div class="hero-cta">
-                <a class="btn btn--solid" href="#templates">Ver seminarios</a>
-                <a class="btn btn--ghost" href="#contact">Agendar asesoría</a>
-              </div>
-              <div class="hero-metrics" aria-label="Beneficios">
-                <div class="metric"><strong>Prevención</strong><span>Hábitos y señales de alerta</span></div>
-                <div class="metric"><strong>IA & Fraude</strong><span>Deepfakes y suplantación</span></div>
-                <div class="metric"><strong>Familias</strong><span>Controles parentales</span></div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="slide">
-          <img src="img/hero-2.svg" alt="Aprender con ejemplos y actividades (imagen genérica)">
-          <div class="slide-overlay">
-            <div class="overlay-inner">
-              <p class="kicker">Seminarios & Talleres</p>
-              <h2>Contenido entrante: comprender, practicar y aplicar</h2>
-              <p class="subtext">Phishing, estafas digitales, buenas prácticas de celular, contraseñas seguras, privacidad y reporte. Orientado a público general e instituciones.</p>
-              <div class="hero-cta">
-                <a class="btn btn--solid" href="#program">Ver programa</a>
-                <a class="btn btn--ghost" href="#contact">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="slide">
-          <img src="img/hero-3.svg" alt="Políticas, prevención y cultura (imagen genérica)">
-          <div class="slide-overlay">
-            <div class="overlay-inner">
-              <p class="kicker">PyMEs & Empresas</p>
-              <h2>Gestión, políticas y estrategias para reducir riesgos cotidianos</h2>
-              <p class="subtext">Capacitaciones para funcionarios, políticas simples, respuesta a incidentes y uso responsable de tecnologías actuales (incluida IA).</p>
-              <div class="hero-cta">
-                <a class="btn btn--solid" href="#projects">Ver impacto</a>
-                <a class="btn btn--ghost" href="#contact">Agendar reunión</a>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <button class="slider-btn slider-btn--prev" type="button" aria-label="Anterior" id="heroPrev"><span aria-hidden="true">‹</span></button>
-      <button class="slider-btn slider-btn--next" type="button" aria-label="Siguiente" id="heroNext"><span aria-hidden="true">›</span></button>
-      <div class="slider-dots" role="tablist" aria-label="Indicadores del carrusel" id="heroDots"></div>
-    </div>
-  </section>
-
-  <!-- Audiences -->
-  <section class="section" id="audiences">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>¿Para quién es?</h2>
-        <p class="muted">Enfoque ciudadano: lenguaje claro, prevención y aplicación práctica. También adaptación a instituciones públicas, programas sociales y equipos PyME.</p>
-      </div>
-
-      <div class="grid grid-3">
-        <article class="card audience-card reveal">
-          <div class="card-body">
-            <p class="kicker">Personas naturales</p>
-            <h3>Protección cotidiana</h3>
-            <p class="muted">Estafas digitales, malware, seguridad del celular, contraseñas y privacidad. Ideal para juntas de vecinos, organizaciones comunitarias y público general.</p>
-            <div class="pills">
-              <span class="pill">Phishing</span><span class="pill">Malware</span><span class="pill">2FA</span><span class="pill">Privacidad</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card audience-card reveal">
-          <div class="card-body">
-            <p class="kicker">Adultos mayores</p>
-            <h3>Prevención de estafas</h3>
-            <p class="muted">Contenido diseñado para reconocer patrones de engaño, presión emocional y suplantaciones por teléfono o mensajería. Con guías simples y repetibles.</p>
-            <div class="pills">
-              <span class="pill">Llamadas</span><span class="pill">WhatsApp</span><span class="pill">Verificación</span><span class="pill">Reporte</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card audience-card reveal">
-          <div class="card-body">
-            <p class="kicker">Protección infantil</p>
-            <h3>Familias e instituciones</h3>
-            <p class="muted">Controles parentales, cuidado de fotos, redes sociales, Roblox, convivencia digital y señales de riesgo. Orientado a educación y acompañamiento.</p>
-            <div class="pills">
-              <span class="pill">Controles</span><span class="pill">Roblox</span><span class="pill">Privacidad</span><span class="pill">Cuidado infantil</span>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div style="margin-top:18px;" class="grid grid-2">
-        <article class="card audience-card reveal">
-          <div class="card-body">
-            <p class="kicker">Instituciones</p>
-            <h3>Programas y seminarios</h3>
-            <p class="muted">Ministerio de la Mujer, protección infantil, municipios y organizaciones. Talleres con actividades seguras, material de apoyo y enfoque en prevención.</p>
-          </div>
-        </article>
-        <article class="card audience-card reveal">
-          <div class="card-body">
-            <p class="kicker">PyMEs & Empresas</p>
-            <h3>Capacitación para funcionarios</h3>
-            <p class="muted">Cultura de seguridad, políticas simples, buenas prácticas, respuesta a incidentes y riesgos emergentes (IA, deepfakes, suplantación).</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section section-alt" id="about">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Sobre mí</h2>
-        <p class="muted">Ciberseguridad ciudadana para personas, familias e instituciones: prevención, hábitos y respuesta ante incidentes.</p>
-      </div>
-
-      <div class="about-grid">
-        <!-- CARD 1: Foto + resumen rápido -->
-        <article class="card about-card about-card--photo reveal">
-          <div class="about-photo">
-            <!-- FOTO:
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0B1020" name="theme-color"/>
+<meta content="Seminarios y asesorías en ciberseguridad ciudadana: prevención de estafas, malware, ingeniería social, IA, protección infantil y capacitación para PyMEs." name="description"/>
+<title>CyberCívica — Ciberseguridad Ciudadana</title>
+<link href="../../img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="css/styles.css" rel="stylesheet"/><link href="../../css/pages.css" rel="stylesheet"/>
+<script data-theme-bootstrap="true">(function(){try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script></head>
+<body class="unified" data-base="../../" data-page="service"><a class="g-skip" href="#main">Saltar al contenido</a><div id="siteHeader"></div><div id="waFloat"></div>
+<!-- Header -->
+<!-- HERO Slider -->
+<section class="hero" id="top">
+<div aria-label="Carrusel de ciberseguridad ciudadana" class="hero-slider hero-slider--xl">
+<div class="slides" id="heroSlides">
+<article class="slide is-active">
+<img alt="Protección digital para la vida real (imagen genérica)" src="img/hero-1.svg"/>
+<div class="slide-overlay">
+<div class="overlay-inner">
+<p class="kicker">Ciberseguridad Ciudadana</p>
+<h1>Orientación práctica para protegerte de estafas, malware e ingeniería social</h1>
+<p class="subtext">Seminarios y asesorías para personas naturales, adultos mayores, protección infantil y equipos PyME. Contenido claro, con ejemplos y actividades seguras.</p>
+<div class="hero-cta">
+<a class="btn btn--solid" href="#templates">Ver seminarios</a>
+<a class="btn btn--ghost" href="#contact">Agendar asesoría</a>
+</div>
+<div aria-label="Beneficios" class="hero-metrics">
+<div class="metric"><strong>Prevención</strong><span>Hábitos y señales de alerta</span></div>
+<div class="metric"><strong>IA &amp; Fraude</strong><span>Deepfakes y suplantación</span></div>
+<div class="metric"><strong>Familias</strong><span>Controles parentales</span></div>
+</div>
+</div>
+</div>
+</article>
+<article class="slide">
+<img alt="Aprender con ejemplos y actividades (imagen genérica)" src="img/hero-2.svg"/>
+<div class="slide-overlay">
+<div class="overlay-inner">
+<p class="kicker">Seminarios &amp; Talleres</p>
+<h2>Contenido entrante: comprender, practicar y aplicar</h2>
+<p class="subtext">Phishing, estafas digitales, buenas prácticas de celular, contraseñas seguras, privacidad y reporte. Orientado a público general e instituciones.</p>
+<div class="hero-cta">
+<a class="btn btn--solid" href="#program">Ver programa</a>
+<a class="btn btn--ghost" href="#contact">Cotizar</a>
+</div>
+</div>
+</div>
+</article>
+<article class="slide">
+<img alt="Políticas, prevención y cultura (imagen genérica)" src="img/hero-3.svg"/>
+<div class="slide-overlay">
+<div class="overlay-inner">
+<p class="kicker">PyMEs &amp; Empresas</p>
+<h2>Gestión, políticas y estrategias para reducir riesgos cotidianos</h2>
+<p class="subtext">Capacitaciones para funcionarios, políticas simples, respuesta a incidentes y uso responsable de tecnologías actuales (incluida IA).</p>
+<div class="hero-cta">
+<a class="btn btn--solid" href="#projects">Ver impacto</a>
+<a class="btn btn--ghost" href="#contact">Agendar reunión</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<button aria-label="Anterior" class="slider-btn slider-btn--prev" id="heroPrev" type="button"><span aria-hidden="true">‹</span></button>
+<button aria-label="Siguiente" class="slider-btn slider-btn--next" id="heroNext" type="button"><span aria-hidden="true">›</span></button>
+<div aria-label="Indicadores del carrusel" class="slider-dots" id="heroDots" role="tablist"></div>
+</div>
+</section>
+<!-- Audiences -->
+<section class="section" id="audiences">
+<div class="container">
+<div class="section-title reveal">
+<h2>¿Para quién es?</h2>
+<p class="muted">Enfoque ciudadano: lenguaje claro, prevención y aplicación práctica. También adaptación a instituciones públicas, programas sociales y equipos PyME.</p>
+</div>
+<div class="grid grid-3">
+<article class="card audience-card reveal">
+<div class="card-body">
+<p class="kicker">Personas naturales</p>
+<h3>Protección cotidiana</h3>
+<p class="muted">Estafas digitales, malware, seguridad del celular, contraseñas y privacidad. Ideal para juntas de vecinos, organizaciones comunitarias y público general.</p>
+<div class="pills">
+<span class="pill">Phishing</span><span class="pill">Malware</span><span class="pill">2FA</span><span class="pill">Privacidad</span>
+</div>
+</div>
+</article>
+<article class="card audience-card reveal">
+<div class="card-body">
+<p class="kicker">Adultos mayores</p>
+<h3>Prevención de estafas</h3>
+<p class="muted">Contenido diseñado para reconocer patrones de engaño, presión emocional y suplantaciones por teléfono o mensajería. Con guías simples y repetibles.</p>
+<div class="pills">
+<span class="pill">Llamadas</span><span class="pill">WhatsApp</span><span class="pill">Verificación</span><span class="pill">Reporte</span>
+</div>
+</div>
+</article>
+<article class="card audience-card reveal">
+<div class="card-body">
+<p class="kicker">Protección infantil</p>
+<h3>Familias e instituciones</h3>
+<p class="muted">Controles parentales, cuidado de fotos, redes sociales, Roblox, convivencia digital y señales de riesgo. Orientado a educación y acompañamiento.</p>
+<div class="pills">
+<span class="pill">Controles</span><span class="pill">Roblox</span><span class="pill">Privacidad</span><span class="pill">Cuidado infantil</span>
+</div>
+</div>
+</article>
+</div>
+<div class="grid grid-2" style="margin-top:18px;">
+<article class="card audience-card reveal">
+<div class="card-body">
+<p class="kicker">Instituciones</p>
+<h3>Programas y seminarios</h3>
+<p class="muted">Ministerio de la Mujer, protección infantil, municipios y organizaciones. Talleres con actividades seguras, material de apoyo y enfoque en prevención.</p>
+</div>
+</article>
+<article class="card audience-card reveal">
+<div class="card-body">
+<p class="kicker">PyMEs &amp; Empresas</p>
+<h3>Capacitación para funcionarios</h3>
+<p class="muted">Cultura de seguridad, políticas simples, buenas prácticas, respuesta a incidentes y riesgos emergentes (IA, deepfakes, suplantación).</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- About -->
+<section class="section section-alt" id="about">
+<div class="container">
+<div class="section-title reveal">
+<h2>Sobre el Servicio</h2>
+<p class="muted">Ciberseguridad ciudadana para personas, familias e instituciones: prevención, hábitos y respuesta ante incidentes.</p>
+</div>
+<div class="about-grid">
+<!-- CARD 1: Foto + resumen rápido -->
+<article class="card about-card about-card--photo reveal">
+<div class="about-photo">
+<!-- FOTO:
               Reemplaza img/profile.jpg por tu fotografía real.
               Recomendado: 1200x1600 (vertical).
             -->
-            <img src="img/profile.jpg" alt="Foto del relator/a (reemplazar)" loading="lazy">
-            <div class="photo-badge"><span class="photo-dot" aria-hidden="true"></span> Ciberseguridad Ciudadana</div>
-          </div>
-
-          <div class="about-mini">
-            <div class="mini-card">
-              <p class="mini-label">Especialidad</p>
-              <p class="mini-value">Seminarios · Talleres · Asesoría preventiva</p>
-            </div>
-            <div class="mini-card">
-              <p class="mini-label">Enfoque</p>
-              <p class="mini-value">Ingeniería social, estafas digitales, uso seguro del celular e IA aplicada.</p>
-            </div>
-            <div class="mini-card">
-              <p class="mini-label">Resultados</p>
-              <p class="mini-value">Protocolos simples, checklist y hábitos para reducir riesgos en el día a día.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- CARD 2: Descripción + audiencias + metodología -->
-        <article class="card about-card reveal">
-          <div class="card-body">
-            <p class="kicker">Perfil</p>
-            <h3>Relator/a y asesor/a en ciberseguridad ciudadana</h3>
-            <p class="muted">
+<img alt="Foto del relator/a (reemplazar)" loading="lazy" src="img/hero-1.svg"/>
+<div class="photo-badge"><span aria-hidden="true" class="photo-dot"></span> Ciberseguridad Ciudadana</div>
+</div>
+<div class="about-mini">
+<div class="mini-card">
+<p class="mini-label">Especialidad</p>
+<p class="mini-value">Seminarios · Talleres · Asesoría preventiva</p>
+</div>
+<div class="mini-card">
+<p class="mini-label">Enfoque</p>
+<p class="mini-value">Ingeniería social, estafas digitales, uso seguro del celular e IA aplicada.</p>
+</div>
+<div class="mini-card">
+<p class="mini-label">Resultados</p>
+<p class="mini-value">Protocolos simples, checklist y hábitos para reducir riesgos en el día a día.</p>
+</div>
+</div>
+</article>
+<!-- CARD 2: Descripción + audiencias + metodología -->
+<article class="card about-card reveal">
+<div class="card-body">
+<p class="kicker">Perfil</p>
+<h3>Relator/a y asesor/a en ciberseguridad ciudadana</h3>
+<p class="muted">
               Apoyo a personas naturales (adultos mayores, familias, protección infantil), instituciones y empresas
               a comprender amenazas actuales: malware, estafas, phishing, clonación de SIM y fraudes asociados a documentación y medios de pago.
             </p>
-
-            <div class="tags" aria-label="Temas principales">
-              <span class="tag">Phishing</span>
-              <span class="tag">Ingeniería social</span>
-              <span class="tag">Malware</span>
-              <span class="tag">Estafas digitales</span>
-              <span class="tag">IA &amp; Deepfakes</span>
-              <span class="tag">Controles parentales</span>
-              <span class="tag">PYMES</span>
-            </div>
-
-            <hr class="sep" />
-
-            <div class="about-cols">
-              <div>
-                <h4>Audiencias</h4>
-                <ul class="bullets">
-                  <li>Personas naturales y adultos mayores</li>
-                  <li>Ministerio de la Mujer / programas sociales</li>
-                  <li>Protección infantil y comunidad educativa</li>
-                  <li>Funcionarios de empresas y PYMES</li>
-                </ul>
-              </div>
-              <div>
-                <h4>Metodología</h4>
-                <ul class="bullets">
-                  <li>Ejemplos reales + ejercicios guiados</li>
-                  <li>Actividades para reconocer señales de fraude</li>
-                  <li>Checklist: contraseñas, celular, banca y RRSS</li>
-                  <li>Recomendaciones por nivel de riesgo</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="cta-row">
-              <a class="btn" href="#contact">Agendar seminario</a>
-              <a class="btn btn--ghost" href="#templates">Ver catálogo</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Program -->
-  <section class="section" id="program">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Programa y contenidos</h2>
-        <p class="muted">Módulos que se pueden combinar según audiencia (personas, adultos mayores, infancia, funcionarios). Incluye ejemplos y actividades.</p>
-      </div>
-
-      <div class="grid grid-3">
-        <article class="card module reveal">
-          <div class="card-body">
-            <p class="kicker">Amenazas</p>
-            <h3>Virus, malware y estafas</h3>
-            <ul class="bullets">
-              <li>Cómo se presentan: mensajes, descargas, enlaces, llamadas.</li>
-              <li>Señales típicas: urgencia, premios, cuentas bloqueadas.</li>
-              <li>Qué hacer: aislar, verificar, reportar.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card module reveal">
-          <div class="card-body">
-            <p class="kicker">Ingeniería social</p>
-            <h3>Cómo operan los ciberdelincuentes</h3>
-            <ul class="bullets">
-              <li>Phishing, smishing y suplantación de identidad.</li>
-              <li>Casos: “cuenta comprometida”, “transferencia urgente”.</li>
-              <li>Actividad: detectar señales sin exponer datos reales.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card module reveal">
-          <div class="card-body">
-            <p class="kicker">Buenas prácticas</p>
-            <h3>Contraseñas y celular</h3>
-            <ul class="bullets">
-              <li>Contraseñas seguras + gestor de claves.</li>
-              <li>2FA y recuperación de cuentas.</li>
-              <li>Seguridad del celular: permisos, actualizaciones, backups.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card module reveal">
-          <div class="card-body">
-            <p class="kicker">IA y evolución</p>
-            <h3>Deepfakes y tecnologías actuales</h3>
-            <ul class="bullets">
-              <li>IA generativa: beneficios y riesgos.</li>
-              <li>Deepfakes: verificación de identidad y fuentes.</li>
-              <li>Políticas de uso responsable en equipos.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card module reveal">
-          <div class="card-body">
-            <p class="kicker">Fraude físico-digital</p>
-            <h3>Documentos y dinero</h3>
-            <ul class="bullets">
-              <li>Falsificación: señales generales y verificación.</li>
-              <li>Buenas prácticas para pagos y transferencias.</li>
-              <li>Qué registrar y cómo reportar.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card module reveal">
-          <div class="card-body">
-            <p class="kicker">Infancia</p>
-            <h3>Controles parentales y Roblox</h3>
-            <ul class="bullets">
-              <li>Privacidad, permisos y límites por edad.</li>
-              <li>Cuidado de fotos: geolocalización y metadatos.</li>
-              <li>Deep Web: riesgos, mitos y conversación segura.</li>
-            </ul>
-          </div>
-        </article>
-      
-        <article class="card module reveal">
-          <div class="card-body">
-            <p class="kicker">Hogar</p>
-            <h3>Ciberseguridad doméstica y domótica segura</h3>
-            <ul class="bullets">
-              <li>Simulación de presencia: automatización de luces/escenas, horarios y rutinas (sin depender de terceros).</li>
-              <li>Cámaras, alarmas y sensores: criterios para elegir, configurar y mantener privacidad (grabación local vs nube).</li>
-              <li>Red del hogar: router/Wi‑Fi, segmentación para IoT y buenas prácticas de actualización.</li>
-              <li>Control de accesos: llaves digitales, biometría y permisos por perfiles (familia/visitas/servicio).</li>
-              <li>Plan por etapas: presupuesto mensual y hoja de ruta para implementar “poco a poco” con prioridades.</li>
-            </ul>
-            <p class="muted" style="margin-top:10px;">Enfoque: seguridad + privacidad propia. Se entrega orientación y checklist; no se instalan sistemas de monitoreo de terceros.</p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Templates / Catalog -->
-  <section class="section section-alt" id="templates">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Catálogo de seminarios y asesorías</h2>
-        <p class="muted">Selecciona el tipo de público y revisa contenidos. Puedes solicitar ajustes por contexto (municipio, programa social o empresa).</p>
-      </div>
-
-      <div class="filters reveal" role="tablist" aria-label="Filtros del catálogo">
-        <button class="filter-btn is-active" type="button" data-filter="all">Todos</button>
-        <button class="filter-btn" type="button" data-filter="personas">Personas</button>
-        <button class="filter-btn" type="button" data-filter="mayores">Adultos mayores</button>
-        <button class="filter-btn" type="button" data-filter="infantil">Protección infantil</button>
-        <button class="filter-btn" type="button" data-filter="pymes">PyMEs & Empresas</button>
-      </div>
-
-      <div class="grid grid-3" id="templateGrid" style="margin-top:18px;"></div>
-    </div>
-  </section>
-
-  <!-- Projects / Impact -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Impacto y proyectos</h2>
-        <p class="muted">Ejemplos de implementación: campañas, talleres y capacitaciones. Se adaptan a comunidades, instituciones y equipos de trabajo.</p>
-      </div>
-
-      <div class="projects-stage reveal">
-        <div class="mini-list" id="projectList">
-          <button class="mini-item is-active" type="button" data-project="0">
-            <span class="mini-title">Campaña anti-phishing</span>
-            <span class="mini-meta">Comunidad · Prevención · Reporte</span>
-          </button>
-          <button class="mini-item" type="button" data-project="1">
-            <span class="mini-title">Protección infantil</span>
-            <span class="mini-meta">Familias · Controles · Privacidad</span>
-          </button>
-          <button class="mini-item" type="button" data-project="2">
-            <span class="mini-title">Capacitación PyME</span>
-            <span class="mini-meta">Políticas · Cultura · Incidentes</span>
-          </button>
-        </div>
-
-        <div class="projects-panel">
-          <div class="project-media">
-            <p class="kicker">Proyecto destacado</p>
-            <h3 id="projectTitle" style="margin:6px 0 0;">Campaña anti-phishing para comunidad</h3>
-            <p class="muted" id="projectDesc" style="margin:10px 0 0;">
+<div aria-label="Temas principales" class="tags">
+<span class="tag">Phishing</span>
+<span class="tag">Ingeniería social</span>
+<span class="tag">Malware</span>
+<span class="tag">Estafas digitales</span>
+<span class="tag">IA &amp; Deepfakes</span>
+<span class="tag">Controles parentales</span>
+<span class="tag">PYMES</span>
+</div>
+<hr class="sep"/>
+<div class="about-cols">
+<div>
+<h4>Audiencias</h4>
+<ul class="bullets">
+<li>Personas naturales y adultos mayores</li>
+<li>Ministerio de la Mujer / programas sociales</li>
+<li>Protección infantil y comunidad educativa</li>
+<li>Funcionarios de empresas y PYMES</li>
+</ul>
+</div>
+<div>
+<h4>Metodología</h4>
+<ul class="bullets">
+<li>Ejemplos reales + ejercicios guiados</li>
+<li>Actividades para reconocer señales de fraude</li>
+<li>Checklist: contraseñas, celular, banca y RRSS</li>
+<li>Recomendaciones por nivel de riesgo</li>
+</ul>
+</div>
+</div>
+<div class="cta-row">
+<a class="btn" href="#contact">Agendar seminario</a>
+<a class="btn btn--ghost" href="#templates">Ver catálogo</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Program -->
+<div class="g-anchor" id="services"></div><section class="section" id="program">
+<div class="container">
+<div class="section-title reveal">
+<h2>Programa y contenidos</h2>
+<p class="muted">Módulos que se pueden combinar según audiencia (personas, adultos mayores, infancia, funcionarios). Incluye ejemplos y actividades.</p>
+</div>
+<div class="grid grid-3">
+<article class="card module reveal">
+<div class="card-body">
+<p class="kicker">Amenazas</p>
+<h3>Virus, malware y estafas</h3>
+<ul class="bullets">
+<li>Cómo se presentan: mensajes, descargas, enlaces, llamadas.</li>
+<li>Señales típicas: urgencia, premios, cuentas bloqueadas.</li>
+<li>Qué hacer: aislar, verificar, reportar.</li>
+</ul>
+</div>
+</article>
+<article class="card module reveal">
+<div class="card-body">
+<p class="kicker">Ingeniería social</p>
+<h3>Cómo operan los ciberdelincuentes</h3>
+<ul class="bullets">
+<li>Phishing, smishing y suplantación de identidad.</li>
+<li>Casos: “cuenta comprometida”, “transferencia urgente”.</li>
+<li>Actividad: detectar señales sin exponer datos reales.</li>
+</ul>
+</div>
+</article>
+<article class="card module reveal">
+<div class="card-body">
+<p class="kicker">Buenas prácticas</p>
+<h3>Contraseñas y celular</h3>
+<ul class="bullets">
+<li>Contraseñas seguras + gestor de claves.</li>
+<li>2FA y recuperación de cuentas.</li>
+<li>Seguridad del celular: permisos, actualizaciones, backups.</li>
+</ul>
+</div>
+</article>
+<article class="card module reveal">
+<div class="card-body">
+<p class="kicker">IA y evolución</p>
+<h3>Deepfakes y tecnologías actuales</h3>
+<ul class="bullets">
+<li>IA generativa: beneficios y riesgos.</li>
+<li>Deepfakes: verificación de identidad y fuentes.</li>
+<li>Políticas de uso responsable en equipos.</li>
+</ul>
+</div>
+</article>
+<article class="card module reveal">
+<div class="card-body">
+<p class="kicker">Fraude físico-digital</p>
+<h3>Documentos y dinero</h3>
+<ul class="bullets">
+<li>Falsificación: señales generales y verificación.</li>
+<li>Buenas prácticas para pagos y transferencias.</li>
+<li>Qué registrar y cómo reportar.</li>
+</ul>
+</div>
+</article>
+<article class="card module reveal">
+<div class="card-body">
+<p class="kicker">Infancia</p>
+<h3>Controles parentales y Roblox</h3>
+<ul class="bullets">
+<li>Privacidad, permisos y límites por edad.</li>
+<li>Cuidado de fotos: geolocalización y metadatos.</li>
+<li>Deep Web: riesgos, mitos y conversación segura.</li>
+</ul>
+</div>
+</article>
+<article class="card module reveal">
+<div class="card-body">
+<p class="kicker">Hogar</p>
+<h3>Ciberseguridad doméstica y domótica segura</h3>
+<ul class="bullets">
+<li>Simulación de presencia: automatización de luces/escenas, horarios y rutinas (sin depender de terceros).</li>
+<li>Cámaras, alarmas y sensores: criterios para elegir, configurar y mantener privacidad (grabación local vs nube).</li>
+<li>Red del hogar: router/Wi‑Fi, segmentación para IoT y buenas prácticas de actualización.</li>
+<li>Control de accesos: llaves digitales, biometría y permisos por perfiles (familia/visitas/servicio).</li>
+<li>Plan por etapas: presupuesto mensual y hoja de ruta para implementar “poco a poco” con prioridades.</li>
+</ul>
+<p class="muted" style="margin-top:10px;">Enfoque: seguridad + privacidad propia. Se entrega orientación y checklist; no se instalan sistemas de monitoreo de terceros.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Templates / Catalog -->
+<section class="section section-alt" id="templates">
+<div class="container">
+<div class="section-title reveal">
+<h2>Catálogo de seminarios y asesorías</h2>
+<p class="muted">Selecciona el tipo de público y revisa contenidos. Puedes solicitar ajustes por contexto (municipio, programa social o empresa).</p>
+</div>
+<div aria-label="Filtros del catálogo" class="filters reveal" role="tablist">
+<button class="filter-btn is-active" data-filter="all" type="button">Todos</button>
+<button class="filter-btn" data-filter="personas" type="button">Personas</button>
+<button class="filter-btn" data-filter="mayores" type="button">Adultos mayores</button>
+<button class="filter-btn" data-filter="infantil" type="button">Protección infantil</button>
+<button class="filter-btn" data-filter="pymes" type="button">PyMEs &amp; Empresas</button>
+</div>
+<div class="grid grid-3" id="templateGrid" style="margin-top:18px;"></div>
+</div>
+</section>
+<!-- Projects / Impact -->
+<section class="section" id="projects">
+<div class="container">
+<div class="section-title reveal">
+<h2>Impacto y proyectos</h2>
+<p class="muted">Ejemplos de implementación: campañas, talleres y capacitaciones. Se adaptan a comunidades, instituciones y equipos de trabajo.</p>
+</div>
+<div class="projects-stage reveal">
+<div class="mini-list" id="projectList">
+<button class="mini-item is-active" data-project="0" type="button">
+<span class="mini-title">Campaña anti-phishing</span>
+<span class="mini-meta">Comunidad · Prevención · Reporte</span>
+</button>
+<button class="mini-item" data-project="1" type="button">
+<span class="mini-title">Protección infantil</span>
+<span class="mini-meta">Familias · Controles · Privacidad</span>
+</button>
+<button class="mini-item" data-project="2" type="button">
+<span class="mini-title">Capacitación PyME</span>
+<span class="mini-meta">Políticas · Cultura · Incidentes</span>
+</button>
+</div>
+<div class="projects-panel">
+<div class="project-media">
+<p class="kicker">Proyecto destacado</p>
+<h3 id="projectTitle" style="margin:6px 0 0;">Campaña anti-phishing para comunidad</h3>
+<p class="muted" id="projectDesc" style="margin:10px 0 0;">
               Materiales breves, ejemplos controlados y guía de verificación “pausa–confirma–reporta”.
             </p>
-          </div>
-          <div class="project-body">
-            <h4 style="margin:0;">Entregables</h4>
-            <ul class="checklist" id="projectChecklist">
-              <li>Plantilla de afiche y mensaje interno</li>
-              <li>Señales típicas: urgencia, premios, enlaces extraños</li>
-              <li>Canales de reporte y respuesta</li>
-            </ul>
-          </div>
-          <div class="project-nav">
-            <button class="icon-btn" type="button" aria-label="Anterior" id="projPrev">‹</button>
-            <span class="muted" id="projectCount">1 / 3</span>
-            <button class="icon-btn" type="button" aria-label="Siguiente" id="projNext">›</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Clients -->
-  <section class="section section-alt" id="clients">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Clientes y aliados</h2>
-        <p class="muted">Ejemplos de tipos de organizaciones con las que se trabaja (reemplaza por logos reales).</p>
-      </div>
-
-      <div class="logo-grid reveal" aria-label="Listado de clientes">
-        <span class="logo">Municipalidades</span>
-        <span class="logo">Programas sociales</span>
-        <span class="logo">Protección infantil</span>
-        <span class="logo">Adulto mayor</span>
-        <span class="logo">PyMEs</span>
-        <span class="logo">Instituciones públicas</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section" id="testimonials">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Testimonios</h2>
-        <p class="muted">Comentarios de participantes y responsables de programas (texto de ejemplo).</p>
-      </div>
-
-      <div class="grid grid-3">
-        <article class="card reveal">
-          <div class="card-body">
-            <p class="quote">“Ahora entendemos qué señales mirar. Las actividades fueron claras y nos dejó un checklist para aplicar en casa.”</p>
-            <div class="person">Participante</div>
-            <div class="role">Taller para familias</div>
-          </div>
-        </article>
-        <article class="card reveal">
-          <div class="card-body">
-            <p class="quote">“Se adaptó muy bien al público adulto mayor. Lenguaje simple, ejemplos concretos y recomendaciones sin asustar.”</p>
-            <div class="person">Coordinación</div>
-            <div class="role">Programa comunitario</div>
-          </div>
-        </article>
-        <article class="card reveal">
-          <div class="card-body">
-            <p class="quote">“Nos ayudó a definir políticas mínimas y un plan para incidentes. La capacitación fue directa y aplicable.”</p>
-            <div class="person">Jefatura</div>
-            <div class="role">PyME de servicios</div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section-alt" id="faq">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Preguntas frecuentes</h2>
-        <p class="muted">Duración, formatos, materiales y alcance.</p>
-      </div>
-
-      <div class="faq reveal">
-        <details>
-          <summary>¿Los talleres incluyen material de apoyo?</summary>
-          <p>Sí. Se entregan checklists, guías breves y recomendaciones adaptadas al público. Para empresas: plantillas de políticas simples.</p>
-        </details>
-        <details>
-          <summary>¿Se puede adaptar para Ministerio de la Mujer o protección infantil?</summary>
-          <p>Sí. Se ajusta el contenido, lenguaje y ejemplos, priorizando prevención, acompañamiento y protocolos de apoyo.</p>
-        </details>
-        <details>
-          <summary>¿Hablan de phishing, SIM y clonaciones?</summary>
-          <p>Se abordan como riesgos y señales de alerta, con enfoque preventivo. No se entrega instrucción operativa para cometer delitos.</p>
-        </details>
-        <details>
-          <summary>¿Modalidad online o presencial?</summary>
-          <p>Ambas. Online con actividades guiadas y material digital; presencial para dinámicas grupales y resolución de dudas en vivo.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2>Contacto</h2>
-        <p class="muted">Cuéntame el público objetivo (personas, adultos mayores, protección infantil o PyME) y el formato (online/presencial).</p>
-      </div>
-
-      <div class="contact-grid">
-        <form class="card form reveal" onsubmit="event.preventDefault(); alert('Formulario de ejemplo. Conecta este formulario a tu backend o a un servicio como Formspree.');">
-          <div class="card-body">
-            <label>
-              Nombre
-              <input type="text" name="name" placeholder="Tu nombre" required>
-            </label>
-            <label>
-              Correo
-              <input type="email" name="email" placeholder="tucorreo@dominio.cl" required>
-            </label>
-            <label>
-              Tipo de solicitud
-              <input type="text" name="type" placeholder="Seminario / Taller / Asesoría / PyME">
-            </label>
-            <label>
-              Mensaje
-              <textarea name="message" placeholder="Cuéntame público, ciudad, fecha tentativa y objetivos."></textarea>
-            </label>
-            <button class="btn btn--solid" type="submit">Enviar solicitud</button>
-            <p class="muted" style="margin:10px 0 0;">Consejo: agrega tu número real en el link de WhatsApp (abajo) y reemplaza correo/redes.</p>
-          </div>
-        </form>
-
-        <div class="contact-cards reveal">
-          <div class="contact-card">
-            <h4>WhatsApp</h4>
-            <p>Respuesta rápida para coordinar fecha y público.</p>
-            <!-- Cambia el número: 56 + código de país + número -->
-            <a data-wa-link href="https://wa.me/56912345678" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
-          </div>
-
-          <div class="contact-card">
-            <h4>Correo</h4>
-            <p>Para cotizaciones formales y coordinación institucional.</p>
-            <a href="mailto:hola@cybercivica.cl">hola@cybercivica.cl</a>
-          </div>
-
-          <div class="contact-card">
-            <h4>LinkedIn</h4>
-            <p>Publicaciones, campañas y próximos seminarios.</p>
-            <a href="#" aria-label="Perfil de LinkedIn">Ver perfil</a>
-          </div>
-
-          <div class="contact-card">
-            <h4>Materiales</h4>
-            <p>Guías y checklists para descargar (enlace de ejemplo).</p>
-            <a href="#templates">Ver catálogo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brand" style="gap:10px;">
-            <img src="img/logo.svg" alt="Logo" />
-            <span>CyberCívica</span>
-          </div>
-          <p class="muted" style="margin:10px 0 0;">
-            Seminarios y asesorías de ciberseguridad ciudadana. Prevención, hábitos y cultura digital.
-          </p>
-        </div>
-
-        <div>
-          <h4 style="margin:0 0 10px;">Secciones</h4>
-          <ul class="footer-list">
-            <li><a href="#program">Programa</a></li>
-            <li><a href="#templates">Catálogo</a></li>
-            <li><a href="#projects">Impacto</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 style="margin:0 0 10px;">Temas</h4>
-          <ul class="footer-list">
-            <li>Phishing y estafas digitales</li>
-            <li>Malware y seguridad del celular</li>
-            <li>IA y deepfakes</li>
-            <li>Protección infantil y controles</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> CyberCívica. Todos los derechos reservados.</span>
-        <span class="muted">Diseño responsivo · Light/Dark · Accesible</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Template Modal -->
-  <div class="modal" id="templateModal" aria-hidden="true" role="dialog" aria-label="Contenido del seminario">
-    <div class="modal-card" role="document">
-      <div class="modal-head">
-        <h3 id="modalTitle">Contenido</h3>
-        <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar">✕</button>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
+</div>
+<div class="project-body">
+<h4 style="margin:0;">Entregables</h4>
+<ul class="checklist" id="projectChecklist">
+<li>Plantilla de afiche y mensaje interno</li>
+<li>Señales típicas: urgencia, premios, enlaces extraños</li>
+<li>Canales de reporte y respuesta</li>
+</ul>
+</div>
+<div class="project-nav">
+<button aria-label="Anterior" class="icon-btn" id="projPrev" type="button">‹</button>
+<span class="muted" id="projectCount">1 / 3</span>
+<button aria-label="Siguiente" class="icon-btn" id="projNext" type="button">›</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Clients -->
+<section class="section section-alt" id="clients">
+<div class="container">
+<div class="section-title reveal">
+<h2>Clientes y aliados</h2>
+<p class="muted">Ejemplos de tipos de organizaciones con las que se trabaja (reemplaza por logos reales).</p>
+</div>
+<div aria-label="Listado de clientes" class="logo-grid reveal">
+<span class="logo">Municipalidades</span>
+<span class="logo">Programas sociales</span>
+<span class="logo">Protección infantil</span>
+<span class="logo">Adulto mayor</span>
+<span class="logo">PyMEs</span>
+<span class="logo">Instituciones públicas</span>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="section" id="testimonials">
+<div class="container">
+<div class="section-title reveal">
+<h2>Testimonios</h2>
+<p class="muted">Comentarios de participantes y responsables de programas (texto de ejemplo).</p>
+</div>
+<div class="grid grid-3">
+<article class="card reveal">
+<div class="card-body">
+<p class="quote">“Ahora entendemos qué señales mirar. Las actividades fueron claras y nos dejó un checklist para aplicar en casa.”</p>
+<div class="person">Participante</div>
+<div class="role">Taller para familias</div>
+</div>
+</article>
+<article class="card reveal">
+<div class="card-body">
+<p class="quote">“Se adaptó muy bien al público adulto mayor. Lenguaje simple, ejemplos concretos y recomendaciones sin asustar.”</p>
+<div class="person">Coordinación</div>
+<div class="role">Programa comunitario</div>
+</div>
+</article>
+<article class="card reveal">
+<div class="card-body">
+<p class="quote">“Nos ayudó a definir políticas mínimas y un plan para incidentes. La capacitación fue directa y aplicable.”</p>
+<div class="person">Jefatura</div>
+<div class="role">PyME de servicios</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+<div class="container">
+<div class="section-title reveal">
+<h2>Preguntas frecuentes</h2>
+<p class="muted">Duración, formatos, materiales y alcance.</p>
+</div>
+<div class="faq reveal">
+<details>
+<summary>¿Los talleres incluyen material de apoyo?</summary>
+<p>Sí. Se entregan checklists, guías breves y recomendaciones adaptadas al público. Para empresas: plantillas de políticas simples.</p>
+</details>
+<details>
+<summary>¿Se puede adaptar para Ministerio de la Mujer o protección infantil?</summary>
+<p>Sí. Se ajusta el contenido, lenguaje y ejemplos, priorizando prevención, acompañamiento y protocolos de apoyo.</p>
+</details>
+<details>
+<summary>¿Hablan de phishing, SIM y clonaciones?</summary>
+<p>Se abordan como riesgos y señales de alerta, con enfoque preventivo. No se entrega instrucción operativa para cometer delitos.</p>
+</details>
+<details>
+<summary>¿Modalidad online o presencial?</summary>
+<p>Ambas. Online con actividades guiadas y material digital; presencial para dinámicas grupales y resolución de dudas en vivo.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="section" id="contact">
+<div class="container">
+<div class="section-title reveal">
+<h2>Contacto</h2>
+<p class="muted">Cuéntame el público objetivo (personas, adultos mayores, protección infantil o PyME) y el formato (online/presencial).</p>
+</div>
+<div class="contact-grid">
+<div class="card reveal" style="padding:18px;">
+  <h3 style="margin:0 0 8px;">Formulario único</h3>
+  <p class="muted" style="margin:0;">Para cotizar este servicio, usa el formulario central del HUB o escríbeme por WhatsApp.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+    <a class="g-btn g-primary" href="../../index.html#contact">Ir al formulario</a>
+    <a class="g-btn g-ghost" href="https://wa.me/56928362758?text=Hola%20Marcos,%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener">WhatsApp</a>
   </div>
-
-
-  
-  <!-- Botón flotante WhatsApp (visible en todo el sitio)
+</div>
+<div class="contact-cards reveal">
+<div class="contact-card">
+<h4>WhatsApp</h4>
+<p>Respuesta rápida para coordinar fecha y público.</p>
+<!-- Cambia el número: 56 + código de país + número -->
+<a data-wa-link="" href="https://wa.me/56928362758" rel="noreferrer" target="_blank">Escribir por WhatsApp</a>
+</div>
+<div class="contact-card">
+<h4>Correo</h4>
+<p>Para cotizaciones formales y coordinación institucional.</p>
+<a href="mailto:hola@cybercivica.cl">hola@cybercivica.cl</a>
+</div>
+<div class="contact-card">
+<h4>LinkedIn</h4>
+<p>Publicaciones, campañas y próximos seminarios.</p>
+<a aria-label="Perfil de LinkedIn" href="#">Ver perfil</a>
+</div>
+<div class="contact-card">
+<h4>Materiales</h4>
+<p>Guías y checklists para descargar (enlace de ejemplo).</p>
+<a href="#templates">Ver catálogo</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<!-- Template Modal -->
+<div aria-hidden="true" aria-label="Contenido del seminario" class="modal" id="templateModal" role="dialog">
+<div class="modal-card" role="document">
+<div class="modal-head">
+<h3 id="modalTitle">Contenido</h3>
+<button aria-label="Cerrar" class="modal-close" id="modalClose" type="button">✕</button>
+</div>
+<div class="modal-body" id="modalBody"></div>
+</div>
+</div>
+<!-- Botón flotante WhatsApp (visible en todo el sitio)
        Reemplaza el número: 56 + código país + número -->
-  <a class="wa-float" href="https://wa.me/56912345678" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.3 22 2 13.7 2 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2Z"/>
-    </svg>
-
-  </a>
-
-<script src="js/main.js"></script>
-  <script>
+<div id="siteFooter"></div><script src="../../js/site.js"></script><script src="js/main.js"></script>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
