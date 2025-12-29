@@ -708,6 +708,19 @@ input:focus, textarea:focus{
   height: clamp(460px, 64vh, 720px);
 }
 
+/*
+  FIX (Hero Slider XL):
+  En este carrusel, tanto la imagen como el overlay están con position:absolute.
+  Si el .slide activo hereda el estilo legacy (.slide.is-active { position: relative; }),
+  su altura colapsa (porque sus hijos no aportan altura) y el contenido queda “corrido”.
+  En XL mantenemos todos los slides absolutos, y activamos interacción sólo en el activo.
+*/
+.hero-slider--xl .slide{ pointer-events: none; }
+.hero-slider--xl .slide.is-active{
+  position: absolute;
+  pointer-events: auto;
+}
+
 /* Reutiliza .slide (ya existe), pero desactiva el overlay legacy */
 .hero-slider--xl .slide::after{ display:none; }
 

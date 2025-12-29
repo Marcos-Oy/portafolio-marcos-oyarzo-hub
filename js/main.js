@@ -3,11 +3,11 @@
 
   // --- Config: cambia estos enlaces a tus URLs reales ---
   const LINKS = {
-    data: "./data-engineering/",
-    cyber: "./ciberseguridad-ciudadana/",
-    web: "./desarrollo-web/",
-    it: "./arquitectura-ti/",
-    ai: "./ia-generativa/"
+    data: "./servicios/data-engineering/",
+    cyber: "./servicios/ciberseguridad-ciudadana/",
+    web: "./servicios/desarrollo-web/",
+    it: "./servicios/arquitectura-ti/",
+    ai: "./servicios/ia-generativa/"
   };
 
   // Apply outlinks
